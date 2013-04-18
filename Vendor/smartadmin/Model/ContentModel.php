@@ -1,4 +1,4 @@
-<?php namespace App\Admin\Extend;
+<?php namespace Smartadmin\Model;
 
 use Think\Model as Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Admin\Extend\ContentController as Controller;
+use Smartadmin\Controller\ContentController as Controller;
 
 class ProductController extends Controller
 {

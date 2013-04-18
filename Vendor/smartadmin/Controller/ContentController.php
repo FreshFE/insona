@@ -1,4 +1,4 @@
-<?php namespace App\Admin\Extend;
+<?php namespace Smartadmin\Controller;
 
 use Think\Url as Url;
 use Think\Request as Request;
