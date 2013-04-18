@@ -5,10 +5,13 @@ use Think\Request as Request;
 use Think\Auth as Auth;
 use Think\Session as Session;
 
-class IndexController extends Controller
+class ProductController extends Controller
 {
 	public function index()
 	{
+		$datas = M('ProductDriver')->where(array('hidden' => 1))->select();
+
+		$this->assign('datas', $datas);
 		$this->display();
 	}
 }
