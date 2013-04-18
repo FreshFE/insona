@@ -1,6 +1,6 @@
 <?php
 
-use Smartadmin\Model\ContentModel as Model;
+use Smartadmin\Model\Content as Model;
 
 class CategoryModel extends Model
 {
