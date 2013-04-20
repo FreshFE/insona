@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
 	public function index()
 	{
-		$datas = M('ProductDriver')->where(array('hidden' => 1))->select();
+		$datas = M('ProductCategory')->where(array('hidden' => 1))->select();
 
 		$this->assign('datas', $datas);
 		$this->display();

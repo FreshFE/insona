@@ -4,7 +4,7 @@ use Smartadmin\Controller\Content as Controller;
 
 class ProductController extends Controller
 {
-	protected $model_name = 'ProductDriver';
+	protected $model_name = 'ProductCategory';
 
 	protected $image_thumb_name = 'thumb';
 

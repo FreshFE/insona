@@ -2,7 +2,7 @@
 
 use Smartadmin\Model\Content as Model;
 
-class ProductDriverModel extends Model
+class ProductCategoryModel extends Model
 {
 
 }

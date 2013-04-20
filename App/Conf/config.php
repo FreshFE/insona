@@ -22,7 +22,8 @@ return array(
 
 		// 默认样式，宽度，高度，模式
 		'thumb' => array(200, 200, 'both'),
-		'392x422' => array(392, 422, 'both')
+		'392x422' => array(392, 422, 'both'),
+		'215x100' => array(215, 100, 'both')
 	),
 
 	/**
