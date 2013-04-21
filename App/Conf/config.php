@@ -24,7 +24,12 @@ return array(
 		'thumb' => array(200, 200, 'both'),
 		'392x422' => array(392, 422, 'both'),
 		'215x100' => array(215, 100, 'both'),
-		'150x170' => array(150, 170, 'both')
+		'150x170' => array(150, 170, 'both'),
+
+		// Third
+		'166x60' => array(166, 60, 'both'),
+		'208x193' => array(208, 193, 'both'),
+		'332x120' => array(332, 120, 'both')
 	),
 
 	/**
