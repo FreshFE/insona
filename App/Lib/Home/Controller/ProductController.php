@@ -51,4 +51,24 @@ class ProductController extends Controller
 
 		$this->display();
 	}
+
+	public function detail()
+	{
+		if(isset($_GET['id']))
+		{
+			$condition['id'] = $_GET['id'];
+		}
+		else {
+			echo '没有产品id, 404!';
+			exit();
+		}
+
+		$model = M('Product');
+		$condition['hidden'] = 1;
+
+		$data = $model->where($condition)->find();
+		$this->assign('data', $data);
+
+		$this->display();
+	}
 }

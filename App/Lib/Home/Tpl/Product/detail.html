@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品展示</title>
+<link href="@/assets/css/All.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<ul>
+			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
+			<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product"id="current" class="container_ul_li_a">产品展示</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a">产品驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/third" class="container_ul_li_a" >三方驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a">资料下载</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/support" class="container_ul_li_a">反馈与建议</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">关于我们</a></li>
+                
+            <li class="container_ul_li1"><a href="__GROUP__/account/register"class="all_logon_a" >注 册</a> <span class="container_span"> &nbsp;| </span></li>
+            <li class="container_ul_li1"><a href="__GROUP__/account/login"class="all_logon_a1">登 陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li class="container_ul_li1"><a href="#"class="all_logon_a1">中 文</a> <span class="container_span"> &nbsp;| </span></li>
+           	<li class="container_ul_li1"><a href="#"class="all_logon_a1">英 文</a> </li>
+		</ul>
+			<input name="serch" type="text" class="all_text1" />
+	</div>
+    <div class="line1"></div>
+    
+    
+	<div class="container1">
+    	<div class="show2_logo">
+        <img src="{{Helper::img($data['coverpath'])}}" width="470" />
+        </div>
+        <div class="show2_body">
+        	<span class="show2_p">{{$data.title}}</span><br /><br />
+            <div style="line-height: 20px;">
+                {{$data.content}}
+            </div>
+            <br />
+            <p class="show2_morey"><span class="show2_RMB">RMB</span> 123,000.00</p>
+           <a href="#" class="show2_a"> 点击即可购买!</a>
+        </div>
+        <div class="show2_install">
+        	<a href="#"><img src="@/assets/images/product2_001.gif" class="show2_img" /></a>
+        	<a href="#" ><img src="@/assets/images/product2_002.gif" class="show2_img"  /></a>
+        	<a href="#" ><img src="@/assets/images/product2_003.gif" class="show2_img"  /></a>
+        	<a href="#" ><img src="@/assets/images/product2_004.gif" class="show2_img"  /></a>
+        </div>
+        <img src="@/assets/images/down_009.gif" />
+        <div class="show2_style">
+        &nbsp;
+        </div>
+    </div>
+ 
+ 
+    
+    <div class="footer_container" >
+   		<div class="down_footer" >
+        	<p align="center"><br /><br />
+         		<img src="@/assets/images/footer.gif"/>&nbsp;&nbsp;Copyright 2012 苏州英纳索智能科技有限公司 版权所有
+          </p><br /><br /><br />
+        	 <div class="all_footer"></div>
+      </div>
+    </div>
+</body>
+</html>
