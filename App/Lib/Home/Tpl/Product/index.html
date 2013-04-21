@@ -116,7 +116,7 @@
 	</div> -->
 <div class="line"></div>
     
-    
+    {{if $pager.totalPages > 1}}
     <div class="container1">
     	<div class="all_page">
     		<div class="all_page_img">
@@ -134,7 +134,7 @@
                	<img src="@/assets/images/page_002.gif" /></div>
                     
             <div class="all_page_2">Page
-                <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalRows}}</div>
+                <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalPages}}</div>
                 
             <div class="all_page_img1">
                 <img src="@/assets/images/page_002.gif" /></div>
@@ -151,6 +151,7 @@
             </div>
         </div>
     </div>
+    {{/if}}
     
     
    <div class="footer_container" >

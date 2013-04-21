@@ -21,7 +21,7 @@ class ProductviewController extends Controller
 		$model = M('Product');
 		$condition['hidden'] = 1;
 		$page = $_GET['page'] ? $_GET['page'] : 1;
-		$listRow = 3;
+		$listRow = 20;
 
 
 		$datas = $model->where($condition)->page($page, $listRow)->select();
@@ -30,7 +30,7 @@ class ProductviewController extends Controller
 		$pager = $model->where($condition)->pager($page, $listRow);
 		$this->assign('pager', $pager);
 
-		$father = M('ProductDriver')->find($condition['product_driver_id']);;
+		$father = M('ProductCategory')->find($condition['product_driver_id']);;
 		$this->assign('father', $father);
 
 		$this->display();

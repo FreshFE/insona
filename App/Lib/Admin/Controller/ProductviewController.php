@@ -17,6 +17,4 @@ class ProductviewController extends Controller
 	protected $category_query_name = 'aid';
 
 	protected $category_id_auto_set = true;
-
-	protected $category_id_require = true;
 }
