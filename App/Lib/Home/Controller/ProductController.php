@@ -9,9 +9,17 @@ class ProductController extends Controller
 {
 	public function index()
 	{
-		$datas = M('ProductCategory')->where(array('hidden' => 1))->select();
+		$model = M('ProductCategory');
+		$condition['hidden'] = 1;
+		$page = $_GET['page'] ? $_GET['page'] : 1;
+		$listRow = 3;
 
+		$datas = $model->where($condition)->page($page, $listRow)->select();
 		$this->assign('datas', $datas);
+
+		$pager = $model->where($condition)->pager($page, $listRow);
+		$this->assign('pager', $pager);
+
 		$this->display();
 	}
 }

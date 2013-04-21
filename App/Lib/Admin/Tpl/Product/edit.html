@@ -83,7 +83,6 @@
 			var uploadCover = new UploadImg('#J_uploadCover');
 			uploadCover.config.formData = { 'id': {{$smarty.get.id}} };
 			uploadCover.onUploadSuccess = function(file, data, response) {
-				console.log(data);
 				var info = $.parseJSON(data);
 				$('#J_cover').attr('src', "@/images/{{$coverThumbSize}}/" + info.name);
 			};

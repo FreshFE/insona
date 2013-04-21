@@ -18,9 +18,17 @@ class ProductviewController extends Controller
 			exit();
 		}
 
+		$model = M('Product');
 		$condition['hidden'] = 1;
-		$datas = M('Product')->where($condition)->select();
+		$page = $_GET['page'] ? $_GET['page'] : 1;
+		$listRow = 3;
+
+
+		$datas = $model->where($condition)->page($page, $listRow)->select();
 		$this->assign('datas', $datas);
+
+		$pager = $model->where($condition)->pager($page, $listRow);
+		$this->assign('pager', $pager);
 
 		$father = M('ProductDriver')->find($condition['product_driver_id']);;
 		$this->assign('father', $father);
