@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>三方驱动</title>
+<link href="@/assets/css/All.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<ul>
+			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
+			<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product" class="container_ul_li_a">产品展示</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a">产品驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/third" class="container_ul_li_a" id="current">三方驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a">资料下载</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/support" class="container_ul_li_a">反馈与建议</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">关于我们</a></li>
+                
+            <li class="container_ul_li1"><a href="__GROUP__/account/register"class="all_logon_a" >注 册</a> <span class="container_span"> &nbsp;| </span></li>
+            <li class="container_ul_li1"><a href="__GROUP__/account/login"class="all_logon_a1">登 陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li class="container_ul_li1"><a href="#"class="all_logon_a1">中 文</a> <span class="container_span"> &nbsp;| </span></li>
+           	<li class="container_ul_li1"><a href="#"class="all_logon_a1">英 文</a> </li>
+		</ul>
+		<input name="serch" type="text" class="all_text1" />
+    	<div class="three_logo">
+    		<p><img src="@/assets/images/three_001.gif"/><p class="all_p_styl">&nbsp;</p>
+          		我们提供我公司自己研发的产品驱动，您可以通过下载并网上购买我们的驱动，来实现产品的升级等其他附属功能。
+        	</p>
+    	</div>
+    </div>
+    <div class="three_line"></div>
+    
+    
+    <div class="container1">
+
+        {{foreach $datas as $key => $data}}
+    	<div class="three_logo1" style="padding-top: 40px;">
+        	<img src="{{Helper::img($data['coverpath'], '166x60')}}" />
+    	</div>
+        
+        <div class="three_body">
+        	<p><span class="three_span1">{{$data.title}}</span></p>
+			<p class="three_p">{{$data.content}}</p>
+    	</div>
+        
+        <div class="three_xian">
+             <img src="@/assets/images/three_005.gif" />
+        </div>
+        
+        <div class="three_see">
+            <a href="__URL__/view/aid/{{$data.id}}" class="three_a">查看更多>></a>
+       	</div>
+
+            {{if ($key + 1) != count($datas)}}
+            <img src="@/assets/images/down_009.gif" />
+            {{/if}}
+        {{/foreach}}
+        
+    </div>
+    <div class="line"></div>
+    
+    
+ 	<div class="container1">
+    	<div class="all_page">
+    		<div class="all_page_img">
+                <img src="@/assets/images/page_001.gif" align="right" />
+               	</div>
+          	<div class="all_page_1">
+               	<a href="#" class="all_page_p">Previous</a></div>
+                    
+           	<div class="all_page_img1">
+               	<img src="@/assets/images/page_002.gif" /></div>
+                    
+            <div class="all_page_2">Page
+                <input name="page" type="text" class="all_pagetext" value="2" /> of &nbsp; 11</div>
+                
+            <div class="all_page_img1">
+                <img src="@/assets/images/page_002.gif" /></div>
+                    
+            <div class="all_page_3">
+               	<a href="#" class="all_page_p">Next</a></div>
+            <div class="all_page_img2">
+               	<img src="@/assets/images/page_004.gif" align="left" />
+            </div>
+        </div>
+    </div>
+    
+    
+   <div class="footer_container" >
+   		<div class="down_footer" >
+        	<p align="center"><br /><br />
+         		<img src="@/assets/images/footer.gif"/>&nbsp;&nbsp;Copyright 2012 苏州英纳索智能科技有限公司 版权所有
+          </p><br /><br /><br />
+        	 <div class="all_footer"></div>
+      </div>
+    </div>
+</body>
+</html>
