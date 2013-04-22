@@ -22,14 +22,21 @@ return array(
 
 		// 默认样式，宽度，高度，模式
 		'thumb' => array(200, 200, 'both'),
+
+		// Product
 		'392x422' => array(392, 422, 'both'),
 		'215x100' => array(215, 100, 'both'),
+
+		// Driver
 		'150x170' => array(150, 170, 'both'),
 
 		// Third
 		'166x60' => array(166, 60, 'both'),
 		'208x193' => array(208, 193, 'both'),
-		'332x120' => array(332, 120, 'both')
+		'332x120' => array(332, 120, 'both'),
+
+		// Download
+		'290x156' => array(290, 156, 'both')
 	),
 
 	/**
