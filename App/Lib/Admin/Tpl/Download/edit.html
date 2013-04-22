@@ -21,6 +21,16 @@
 			</div>
 
 			<div class="control-group">
+				<label class="control-label">必须会员才可下载</label>
+				<div class="controls">
+					<select name="is_vip">
+						<option value="0" {{if $data.is_vip == 0}}selected="selected"{{/if}}>非会员即可</option>
+						<option value="1" {{if $data.is_vip == 1}}selected="selected"{{/if}}>会员才可</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="control-group">
 				<label class="control-label">内容</label>
 				<div class="controls">
 					<textarea class="ckeditor" name="content">{{$data.content}}</textarea>
