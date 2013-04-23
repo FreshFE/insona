@@ -30,15 +30,17 @@
     
     
     <div class="container1">
+      <form action="__SELF__" method="post">
     	<div class="propose_content">
+
        		<p class="p" align="left">
             	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题：&nbsp;&nbsp;
-            	<input name="permit" type="text" class="propose_text" />&nbsp;&nbsp;24个字符内
+            	<input name="title" type="text" class="propose_text" />&nbsp;&nbsp;24个字符内
 				<br /><span class="propose_span">产品型号：</span>
-					<select name=mysel class="seltxt">
-					<option value=11 selected>索尼
-					<option value=12>LG
-					<option value=13>西门
+					<select name="product_id" class="seltxt">
+            {{foreach $datas as $data}}
+					   <option value="{{$data.id}}">{{$data.title}}</option>
+             {{/foreach}}
 					</select>
            		 </p><br />
             
@@ -46,14 +48,13 @@
 			<div class="propose_div">
             	<p class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容：&nbsp;&nbsp;</p>
             </div>
-            	<textarea name="" cols="" rows="1" class="propose_text1" style="overflow-y:hidden"></textarea>
+            	<textarea name="content" cols="" rows="1" class="propose_text1" style="overflow-y:hidden"></textarea>
             <div class="propose_div1">			
             	&nbsp;&nbsp;200个字符内
             </div>
-            
-            
     	</div>
-        <input name="btn" type="submit" class="propose_btn " value=""/>
+        <input type="submit" class="propose_btn" value=""/>
+        </form>
     </div>
     
 
