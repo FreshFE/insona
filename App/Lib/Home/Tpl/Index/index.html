@@ -10,8 +10,12 @@
     <div class="container">
 		<ul>
 			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
+            {{if $smarty.session.com_auth_key}}
+            <li class="container_ul_li1"><a href="__GROUP__/account/logout"class="all_logon_a2" > 注销 inSona 账号</a> <span class="container_span"> &nbsp;| </span></li>
+            {{else}}
             <li class="container_ul_li1"><a href="__GROUP__/account/register"class="all_logon_a2" > 注 册</a> <span class="container_span"> &nbsp;| </span></li>
             <li class="container_ul_li1"><a href="__GROUP__/account/login"class="all_logon_a1">登 陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            {{/if}}
             <li class="container_ul_li1"><a href="#"class="all_logon_a1">中 文</a> <span class="container_span"> &nbsp;| </span></li>
            	<li class="container_ul_li1"><a href="#"class="all_logon_a1">英 文</a> </li>
 		</ul>

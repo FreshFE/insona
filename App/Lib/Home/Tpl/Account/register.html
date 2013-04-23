@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<link href="@/assets/css/All.css" rel="stylesheet" type="text/css" />
+<head>
+	<div class="container">
+		<ul>
+			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
+			<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product" class="container_ul_li_a"><span>产品展示</span></a></li>
+			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a"><span>产品驱动</span></a></li>
+			<li class="container_ul_li"><a href="__GROUP__/third" class="container_ul_li_a" ><span>三方驱动</span></a></li>
+			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a"><span>资料下载</span></a></li>
+			<li class="container_ul_li"><a href="__GROUP__/support" class="container_ul_li_a"><span>反馈与建议</span></a></li>
+			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a"><span>关于我们</span></a></li>
+                
+      {{include file="../Bases/account.html"}}
+		</ul>
+		<input name="serch" type="text" class="all_text1" />
+	
+    	<div class="propose_us_body">
+    	 	<p>&nbsp;</p>
+    	  	<p><br />
+    	    <img src="@/assets/images/register_001.gif" class="register_img" /><br /></p>
+  		</div>
+	</div>
+	<div class="line"></div>
+    
+	<div class="container1">
+        <form action="__SELF__" method="post" enctype="multipart/form-data">
+   		<div class="register_header">
+            <p class="three_p">我们只接受经销商会员，请经销商仔细并真实的填写信息，审核通过后，即可成为会员。</p>
+        </div>
+        <p>
+       <div class="register_name">
+        	<p align="right">姓名：</p>
+        </div>
+        <div class="register_text1">
+       		<p align="right"><input name="username" type="text" class="register_text" /></p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">手机：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="phone" type="text" class="register_text" /></p>
+        </div>
+        </p>
+
+
+        <p>
+       	<div class="register_name">
+        	<p align="right">公司名称：</p>
+        </div>
+        <div class="register_text1">
+       		<p align="right"><input name="company" type="text" class="register_text" /></p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">生日：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="birthday" type="text" class="register_text" placeholder="1980-1-1" /></p>
+        </div>
+        </p>
+ 
+ 
+       <p>
+       <div class="register_name">
+        	<p align="right">上传营业执照：</p>
+        </div>
+        <div class="register_text1">
+          <p align="right"><input name="license_upload" type="file" class="register_text" /></p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">证件号：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="idcard" type="text" class="register_text" /></p>
+        </div>
+        </p>
+        
+        
+       	<p>
+       	<div class="register_name">
+        	<p align="right">国家：</p>
+        </div>
+        <div class="register_text1">
+       		<p align="left">
+            <select name="country" class="register_seltxt">
+      				<option value="china" selected="selected">中国
+      				<option value="us">美国
+      				<option value="uk">英国
+				    </select>
+        </p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">E-MAIL：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="email" type="text" class="register_text" /></p>
+        </div>
+        </p>
+        
+        
+        <p>
+       	<div class="register_name">
+        	<p align="right">城市：</p>
+        </div>
+        <div class="register_text1">
+            <p align="left"><input name="city" type="text" class="register_text" /></p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">密码：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="password" type="password" class="register_text" /></p>
+        </div>
+        </p>
+        
+        
+        <p>
+       <div class="register_name">
+        	<p align="right">街道地址：</p>
+        </div>
+        <div class="register_text1">
+       		<p align="right"><input name="address" type="text" class="register_text" /></p>
+        </div>
+        <div class="register_name1">
+        	<p align="right">确认密码：</p>
+        </div>
+        <div class="register_text2">
+       		<p align="right"><input name="repassword" type="password" class="register_text" /></p>
+        </div>
+        </p>
+        
+        
+       <p>
+       <div class="register_name2">
+        	<p align="right"> 安装方式：</p>
+        </div>
+        <div class="register_text3">
+       		<p align="left">
+            	<label>
+  					<input type="radio" name="install_type" value="住宅" class="radio" checked="checked" />
+					住宅&nbsp;&nbsp;&nbsp;&nbsp;	
+ 					<input type="radio" name="install_type" value="轻型商用" class="radio" />
+					轻型商用
+                </label>
+                <img src="@/assets/images/register_004.gif"  class="register_lable_img"/>
+            </p>
+        </div>
+        
+        <div class="register_text2">
+       		<p align="right"><input type="submit" class="btn1" id="button" value="" /></p>
+        </div>
+        </p>
+        
+        
+        <p>
+       	<div class="register_name3">
+        </div>
+        <div class="register_text2">
+       		<p align="left">
+                <select name="install_way" class="register_seltxt">
+    				<option value="上门服务" selected="selected">上门服务
+    				<option value="网络安装">网络安装
+    				<option value="自己安装">自己安装
+				</select>
+            </p>
+        </div>
+        </form>
+  	</div>
+
+
+	<div class="footer_container" >
+   		<div class="down_footer" >
+        	<p align="center"><br /><br />
+         		<img src="@/assets/images/footer.gif"/>&nbsp;&nbsp;Copyright 2012 苏州英纳索智能科技有限公司 版权所有
+          </p><br /><br /><br />
+        	 <div class="all_footer"></div>
+      </div>
+    </div>
+</body>
+</html>
+
