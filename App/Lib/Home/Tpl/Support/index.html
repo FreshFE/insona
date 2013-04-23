@@ -37,9 +37,9 @@
             	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题：&nbsp;&nbsp;
             	<input name="title" type="text" class="propose_text" />&nbsp;&nbsp;24个字符内
 				<br /><span class="propose_span">产品型号：</span>
-					<select name="product_id" class="seltxt">
+					<select name="product" class="seltxt">
             {{foreach $datas as $data}}
-					   <option value="{{$data.id}}">{{$data.title}}</option>
+					   <option value="{{$data.title}}">{{$data.title}}</option>
              {{/foreach}}
 					</select>
            		 </p><br />

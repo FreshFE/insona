@@ -12,7 +12,7 @@ class SupportModel extends Model
 	protected $_validate = array(
 		
 		array('title', 'require', '必填标题', 1),
-		array('product_id', 'require', '必填产品型号', 1),
+		array('product', 'require', '必填产品型号', 1),
 		array('content', 'require', '必填意见内容', 1),
 	);
 }
