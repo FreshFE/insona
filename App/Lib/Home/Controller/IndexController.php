@@ -9,6 +9,9 @@ class IndexController extends Controller
 {
 	public function index()
 	{
+		$slides = M('Banner')->where(array('cid' => 6, 'hidden' => 1))->select();
+		$this->assign('slides', $slides);
+
 		$this->display();
 	}
 }

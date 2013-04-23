@@ -30,8 +30,8 @@
         textarr = new Array();
         var swf_width=1680;
         var swf_height=448;
-        var files = "@/assets/images/banner_001.jpg|@/assets/images/banner_002.jpg|@/assets/images/banner_003.jpg";
-        var links = "#|#|#|#";
+        var files = "{{foreach $slides as $key => $data}}{{if $key !== 0}}|{{/if}}{{Helper::img($data['coverpath'], '1680x445')}}{{/foreach}}";
+        var links = "{{foreach $slides as $key => $data}}{{if $key !== 0}}|{{/if}}{{$data.hyperlink}}{{/foreach}}";
         var texts = "";
         for(i=1;i<picarr.length;i++){
           if(files=="") files = picarr[i];

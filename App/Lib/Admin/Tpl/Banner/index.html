@@ -3,14 +3,14 @@
 {{block 'mainarea'}}
 
 	<ul class="breadcrumb">
-		<li><a href="__GROUP__/case">Case</a> <span class="divider">/</span></li>
-		<li class="active">List</li>
+		<li><a href="__URL__/index">Banner</a> <span class="divider">/</span></li>
+		<li class="active">列表</li>
 	</ul>
 
 	<div class="section-title">
-		<h1>Case</h1>
+		<h1>Banner</h1>
 		<div class="bar">
-			<a href="__URL__/add" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> New</a>
+			<a href="__URL__/add" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> 新建</a>
 		</div>
 	</div>
 
@@ -21,46 +21,44 @@
 			<thead>
 				<tr>
 					<td class="span1">ID</td>
-					<td class="span1">{{L('public')}}</td>
-					<td>{{L('title')}}</td>
-					<td>Priority</td>
-					<td>Custom Date</td>
+					<td class="span1">公开？</td>
+					<td>标题</td>
+					<td>更新日期</td>
 					<td class="span1"></td>
 				</tr>
 			</thead>
 
 			<tbody>
 
-				{{foreach $news as $value}}
+				{{foreach $datas as $data}}
 				<tr>
 
-					<td>#{{$value.id}}</td>
+					<td>#{{$data.id}}</td>
 
 					<td>
-						{{if $value.hidden == 0}}
+						{{if $data.hidden == 0}}
 							<div class="btn-group">
-								<a href="__URL__/enable/id/{{$value.id}}" class="btn btn-danger btn-small"><i class="icon-remove icon-white"></i></a>
-								<a href="__URL__/enable/id/{{$value.id}}" class="btn btn-danger btn-small">{{L('unpublic')}}</a>
+								<a href="__URL__/enable/id/{{$data.id}}" class="btn btn-danger btn-small"><i class="icon-remove icon-white"></i></a>
+								<a href="__URL__/enable/id/{{$data.id}}" class="btn btn-danger btn-small">未公开</a>
 							</div>
 						{{else}}
 							<div class="btn-group">
-								<a href="__URL__/enable/id/{{$value.id}}" class="btn btn-success btn-small"><i class="icon-ok icon-white"></i></a>
-								<a href="__URL__/enable/id/{{$value.id}}" class="btn btn-success btn-small">{{L('public')}}</a>
+								<a href="__URL__/enable/id/{{$data.id}}" class="btn btn-success btn-small"><i class="icon-ok icon-white"></i></a>
+								<a href="__URL__/enable/id/{{$data.id}}" class="btn btn-success btn-small">公开</a>
 							</div>
 						{{/if}}
 					</td>
 					<td>
-						{{$value.title}}
+						{{$data.title}}
 					</td>
 
-					<td>{{$value.priority}}</td>
-
-					<td>{{date('Y-m-d', $value['customline'])}}</td>
+					<td>{{date('Y-m-d', $data['updateline'])}}</td>
 					
 					<td>
 						<div class="btn-group">
-							<a href="__URL__/edit/id/{{$value.id}}" class="btn btn-mini" title="Edit"><i class="icon-edit"></i></a>
-							<a href="__URL__/delete/id/{{$value.id}}" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+							<a href="__GROUP__/productview/index/aid/{{$data.id}}" class="btn btn-mini" title="Edit"><i class="icon-th"></i></a>
+							<a href="__URL__/edit/id/{{$data.id}}" class="btn btn-mini" title="Edit"><i class="icon-edit"></i></a>
+							<a href="__URL__/delete/id/{{$data.id}}" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
 						</div>
 					</td>
 
@@ -70,7 +68,7 @@
 			</tbody>
 		</table>
 
-		{{$pageShow}}
+		{{include file="../Bases/page.html"}}
 	</div>
 
 {{/block}}

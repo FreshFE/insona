@@ -36,7 +36,10 @@ return array(
 		'332x120' => array(332, 120, 'both'),
 
 		// Download
-		'290x156' => array(290, 156, 'both')
+		'290x156' => array(290, 156, 'both'),
+
+		// Banner - Home
+		'1680x445' => array(1680, 445, 'both')
 	),
 
 	/**

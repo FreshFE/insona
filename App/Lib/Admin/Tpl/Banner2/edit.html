@@ -3,25 +3,25 @@
 {{block 'mainarea'}}
 
 	<ul class="breadcrumb">
-		<li><a href="__URL__/index">文章</a> <span class="divider">/</span></li>
-		<li class="active">编辑</li>
+		<li><a href="__GROUP__/news">Case</a> <span class="divider">/</span></li>
+		<li class="active">edit</li>
 	</ul>
 
 	<div class="section">
 		<form action="__SELF__" method="post" class="form-horizontal">
 			<fieldset>
-				<legend>编辑</legend>
+				<legend>Edit</legend>
 			</fieldset>
 
 			<div class="control-group">
-				<label class="control-label">标题</label>
+				<label class="control-label">Title</label>
 				<div class="controls">
 					<input type="text" name="title" value="{{$data.title}}">
 				</div>
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">文章分类</label>
+				<label class="control-label">Category</label>
 				<div class="controls">
 					<select name="cid">
 						{{foreach $category as $value}}
@@ -32,28 +32,35 @@
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">内容</label>
-				<div class="controls">
-					<textarea name="content" rows="8" class="span8">{{$data.content}}</textarea>
-				</div>
-			</div>
-
-			<div class="control-group">
-				<label class="control-label">超链接</label>
+				<label class="control-label">Hyperlink</label>
 				<div class="controls">
 					<input type="text" name="hyperlink" value="{{$data.hyperlink}}">
 				</div>
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">封面</label>
+				<label class="control-label">Priority</label>
 				<div class="controls">
-					<img src="{{Helper::img($data['coverpath'], $coverThumbSize)}}" id="J_cover">
+					<input type="text" name="priority" value="{{$data.priority}}">
 				</div>
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">上传封面</label>
+				<label class="control-label">Custom Date</label>
+				<div class="controls">
+					<input type="text" name="customline" id="J_datepicker" value="{{date('Y-m-d', $data['customline'])}}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Cover</label>
+				<div class="controls">
+					<img src="{{img($data['coverpath'], '212x137')}}" id="J_cover">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Set Cover</label>
 				<div class="controls">
 					<input type="file" id="J_uploadCover" name="cover_upload">
 				</div>
@@ -61,8 +68,8 @@
 
 			<div class="form-actions">
 				<input type="hidden" name="id" value="{{$data.id}}">
-				<button type="submit" class="btn btn-primary">保存设置</button>
-				<a href="__URL__/index" class="btn">取消</a>
+				<button type="submit" class="btn btn-primary">Save changes</button>
+				<a href="__URL__/index" class="btn">Cancel</a>
 			</div>
 		</form>
 	</div>
@@ -86,12 +93,40 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 
+			// 图片上传区域
+			var $placePhoto = $('#J_placePhoto');
+			var uploadImg = new UploadImg('#J_uploadPhoto');
+
+			uploadImg.onUploadSuccess = function(file, data, response) {
+
+			    var info = $.parseJSON(data);
+
+			    $('<img>')
+			    	.attr('src', "@/images/120x120/" + info.name)
+			    	.data('name', info.name)
+			    	.appendTo($placePhoto);
+
+			};
+
+			uploadImg.upload('__URL__/image');
+
+			// 上传图片插入文本
+			$placePhoto.delegate('img', 'click', function(){
+
+			    var name = $(this).data('name');
+			    var editor = CKEDITOR.instances.content;
+			    var value = '<img src="@/images/o/'+name+'">'
+			    editor.insertHtml(value);
+			    return false;
+			});
+
 			// 上传封面图片
 			var uploadCover = new UploadImg('#J_uploadCover');
 			uploadCover.config.formData = { 'id': {{$smarty.get.id}} };
 			uploadCover.onUploadSuccess = function(file, data, response) {
+				
 				var info = $.parseJSON(data);
-				$('#J_cover').attr('src', "@/images/{{$coverThumbSize}}/" + info.name);
+				$('#J_cover').attr('src', "@/images/212x137/" + info.name);
 			};
 			uploadCover.upload('__URL__/cover');
 
