@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索</title>
+<link href="@/assets/css/All.css" rel="stylesheet" type="text/css" />
+<head>
+<body>
+	<div class="container">
+		<ul>
+			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
+			<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product" class="container_ul_li_a">产品展示</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a">产品驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/third" class="container_ul_li_a" >三方驱动</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a">资料下载</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/support" class="container_ul_li_a"id="current">反馈与建议</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">关于我们</a></li>
+        
+        {{include file="../Bases/account.html"}}        
+        
+		</ul><br /><br /><br /><br /><br />
+      <form action="__SELF__" method="get">
+   			<input name="q" type="text" class="search_text" value="{{$smarty.get.q}}"/>
+            <input type="submit" class="search_btn" value="" />
+            </form>
+   	</div>
+    <div class="line1"></div>
+    
+    
+    <div class="container1">
+
+      {{if $data_empty === 1}}
+
+        <div class="search_content">
+            <h1>“{{$smarty.get.q}}”，该关键词没有搜索结果</h1><br />
+        </div>
+      {{/if}}
+
+      {{foreach $product as $key => $data}}
+
+    	<div class="search_content">
+        	<h1>{{$data.title}}<a href="__GROUP__/product/detail/id/{{$data.id}}" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+			   <p class="three_p1">
+            {{$data.content}}
+            </p>
+   		</div>
+        	
+        <img src="@/assets/images/down_009.gif" />
+
+        {{/foreach}}
+
+        {{foreach $driver as $key => $data}}
+
+      <div class="search_content">
+          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+         <p class="three_p1">
+            {{$data.content}}
+            </p>
+      </div>
+          
+        <img src="@/assets/images/down_009.gif" />
+
+        {{/foreach}}
+
+        {{foreach $third as $key => $data}}
+
+      <div class="search_content">
+          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+         <p class="three_p1">
+            {{$data.content}}
+            </p>
+      </div>
+          
+        <img src="@/assets/images/down_009.gif" />
+
+        {{/foreach}}
+ 	</div>
+    
+    
+    <div class="footer_container" >
+   		<div class="down_footer" >
+        	<p align="center"><br /><br />
+         		<img src="@/assets/images/footer.gif"/>&nbsp;&nbsp;Copyright 2012 苏州英纳索智能科技有限公司 版权所有
+          </p><br /><br /><br />
+        	 <div class="all_footer"></div>
+      </div>
+    </div>
+</body>
+</html>
