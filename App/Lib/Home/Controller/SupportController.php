@@ -37,7 +37,8 @@ class SupportController extends Controller
 			}
 		}
 		catch(Exception $error) {
-			Debug::output($error);
+			// Debug::output($error);
+			Redirect::error($error->getMessage());
 		}
 	}
 }

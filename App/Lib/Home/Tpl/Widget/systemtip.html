@@ -1,0 +1,68 @@
+{{if !$data.status}}
+	
+	<div class="system-tip error" id="J_system_tip" title="轻点关闭提示，或3秒后自动关闭，鼠标经过时会关闭自动关闭">
+		{{$data.info}}
+	</div>
+
+{{else}}
+
+	<div class="system-tip" id="J_system_tip" title="轻点关闭提示，或3秒后自动关闭，鼠标经过时会关闭自动关闭">
+		{{$data.info}}
+	</div>
+
+{{/if}}
+
+<style type="text/css">
+	.system-tip {
+		position: fixed;
+		width: 200px;
+		color: #fff;
+		top: 0;
+		left: 0;
+		background: #005e20;
+		text-align: center;
+		padding: 20px 10px;
+		border-radius: 5px;
+	}
+	.system-tip.error
+	{
+		background: #982a1a;
+	}
+</style>
+
+<script type="text/javascript" src="@/assets/js/jquery.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+
+		var $tip = $('#J_system_tip');
+		var timeout;
+		var closeTip = function() {
+
+			timeout = setTimeout(function() {
+				$tip.fadeOut();
+			}, 3000);
+		}
+
+		// 执行自动关闭
+		closeTip();
+
+		$tip
+			.css({
+				'left': ($(window).width() - $tip.width()) / 2,
+				'top': ($(window).height() - $tip.height()) / 2 - 80
+			})
+			.on('click', function() {
+
+				$tip.fadeOut();
+			})
+			.hover(function() {
+
+				clearTimeout(timeout);
+			}, function() {
+
+				closeTip();
+			});
+	});
+
+</script>
