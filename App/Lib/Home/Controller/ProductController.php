@@ -69,6 +69,12 @@ class ProductController extends Controller
 		$data = $model->where($condition)->find();
 		$this->assign('data', $data);
 
+		// 检查用户是否登录
+		if(Session::get('com_auth_key'))
+		{
+			$this->assign('user_id', Session::get('com_auth_key'));
+		}
+
 		$this->display();
 	}
 }

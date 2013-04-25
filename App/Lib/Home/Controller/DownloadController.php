@@ -4,6 +4,7 @@ use Think\Controller as Controller;
 use Think\Request as Request;
 use Think\Auth as Auth;
 use Think\Session as Session;
+use Think\Redirect as Redirect;
 
 class DownloadController extends Controller
 {
@@ -12,6 +13,12 @@ class DownloadController extends Controller
 		$this->parse_is_vip('novip', 0);
 
 		$this->parse_is_vip('vip', 1);
+
+		// 检测是否登录
+		if(Session::get('com_auth_key'))
+		{
+			$this->assign('user_id', Session::get('com_auth_key'));
+		}
 
 		$this->display();
 	}
@@ -38,5 +45,10 @@ class DownloadController extends Controller
 		$Pager = new \Think\Library\Pager();
 		$Pager->varPage = $varPage;
 		return $Pager->output($count, $listRow);
+	}
+
+	public function noload()
+	{
+		Redirect::error('请先注册登录后，才可下载该内容');
 	}
 }

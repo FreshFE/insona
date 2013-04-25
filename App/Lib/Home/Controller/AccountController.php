@@ -6,6 +6,7 @@ use Think\Exception as Exception;
 use Think\Debug as Debug;
 use Think\Redirect as Redirect;
 use Think\Session as Session;
+use Think\Url as Url;
 
 use Think\Library\Upload\Upload as Upload;
 
@@ -19,7 +20,8 @@ class AccountController extends Controller
 
 	public function get_register()
 	{
-		Session::set('account_last_url', empty($_SERVER["HTTP_REFERER"]) ? __GROUP__ : $_SERVER["HTTP_REFERER"]);
+		$this->check_auth();
+		$this->set_url_session();
 		$this->display();
 	}
 
@@ -58,7 +60,8 @@ class AccountController extends Controller
 
 	public function get_login()
 	{
-		Session::set('account_last_url', empty($_SERVER["HTTP_REFERER"]) ? __GROUP__ : $_SERVER["HTTP_REFERER"]);
+		$this->check_auth();
+		$this->set_url_session();
 		$this->display();
 	}
 
@@ -91,15 +94,23 @@ class AccountController extends Controller
 		}
 	}
 
+	protected function check_auth()
+	{
+		if(Session::get('com_auth_key'))
+		{
+			Redirect::success('登录inSona', Url::make('index/index'));
+		}
+	}
+
+	protected function set_url_session()
+	{
+		Session::set('account_last_url', empty($_SERVER["HTTP_REFERER"]) ? __GROUP__ : $_SERVER["HTTP_REFERER"]);
+	}
+
 	protected function set_auth($user_id)
 	{
 		Session::set('com_auth_key', $user_id);
 		Redirect::success('登录成功', Session::get('account_last_url'));
-	}
-
-	public function test()
-	{
-		dump(Session::get('com_auth_key'));
 	}
 
 	public function logout()

@@ -34,8 +34,12 @@
                 {{$data.content}}
             </div>
             <br />
-            <p class="show2_morey"><span class="show2_RMB">RMB</span> {{$data.price}}</p>
-           <a href="{{$data.link}}" class="show2_a" target="_blank"> 点击即可购买!</a>
+            {{if $user_id}}
+                <p class="show2_morey"><span class="show2_RMB">RMB</span> {{$data.price}}</p>
+                <a href="{{$data.link}}" class="show2_a" target="_blank"> 点击即可购买!</a>
+            {{else}}
+                <a href="__GROUP__/account/register" class="show2_morey" style="font-size: 14px;">注册登录后即可查看产品的价格和购买链接</a>
+            {{/if}}
         </div>
         <div class="show2_install">
         	<a href="#"><img src="@/assets/images/product2_001.gif" class="show2_img" /></a>
