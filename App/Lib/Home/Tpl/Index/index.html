@@ -1,9 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
 <link href="@/assets/css/All.css" rel="stylesheet" type="text/css" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -100,7 +101,8 @@
     
     <div class="container1">
     	<div class="index_contact" style="line-height: 20px;">
-        	<img src="@/assets/images/we_003.gif" /><p class="p_call">&nbsp;</p>
+        	<img src="@/assets/images/we_003.gif" />
+            <p class="p_call">&nbsp;</p>
             	<!-- <p class="three_p1" style="line-height: 22px;"> -->
                     {{$contact.content}}
                 <!-- </p> -->
@@ -109,7 +111,8 @@
         	<img src="@/assets/images/index_005.gif" /><p class="p_call">&nbsp;</p>
             	<p class="three_p1">谢谢大家对我们insona产品的关注，我<br />们会陆续推出新品，敬请期待！</p>
             	<br /><br />
-            <a href="#" class="a"><img src="@/assets/images/index_003.jpg" /></a>
+            <!-- <a href="#" class="a"><img src="@/assets/images/index_003.jpg" /></a> -->
+            <wb:follow-button uid="3032982257" type="red_1" width="67" height="24" ></wb:follow-button>
         </div>
     </div>
     
