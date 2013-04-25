@@ -39,6 +39,20 @@
 			</div>
 
 			<div class="control-group">
+				<label class="control-label">价格</label>
+				<div class="controls">
+					<input type="text" name="price" value="{{$data.price}}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">购买链接</label>
+				<div class="controls">
+					<input type="text" name="link" value="{{$data.link}}">
+				</div>
+			</div>
+
+			<div class="control-group">
 				<label class="control-label">封面</label>
 				<div class="controls">
 					<img src="{{Helper::img($data['coverpath'], $coverThumbSize)}}" id="J_cover">
