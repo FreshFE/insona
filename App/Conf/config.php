@@ -28,6 +28,7 @@ return array(
 		// Product
 		'392x422' => array(392, 422, 'both'),
 		'215x100' => array(215, 100, 'both'),
+		'680width' => array(680, 680, 'width'),
 
 		// Driver
 		'150x170' => array(150, 170, 'both'),

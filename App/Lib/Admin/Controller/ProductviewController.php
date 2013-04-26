@@ -1,6 +1,8 @@
 <?php
 
 use Smartadmin\Controller\Content as Controller;
+use Think\Response as Response;
+use Think\Library\Upload\Upload as Upload;
 
 class ProductviewController extends Controller
 {
@@ -17,4 +19,16 @@ class ProductviewController extends Controller
 	protected $category_query_name = 'aid';
 
 	protected $category_id_auto_set = true;
+
+	public function coverrequirement()
+	{
+		// 上传图片
+		$info = Upload::image($_FILES['uploadify_file'], '680width');
+
+		// 建立数据表
+		$this->model->where(array('id' => $_POST['id']))->save(array('cover_requirement' => $info['name']));
+
+		// 输出JSON
+		Response::json($info);
+	}
 }
