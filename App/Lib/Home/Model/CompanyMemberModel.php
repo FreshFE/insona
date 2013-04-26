@@ -12,16 +12,6 @@ class CompanyMemberModel extends Model
 	);
 
 	protected $_validate = array(
-		
-		array('username', 'require', '该姓名已存在', 1, 'unique'),
-		array('email', '/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/', '电子邮件格式不正确'),
-		array('phone', '/^[\d-\+]{10,15}$/', '手机格式不正确'),
-		array('idcard', '/^[a-zA-Z0-9-+]+$/', '证件号格式不正确'),
-		array('birthday', '/^\d{4}-\d{1,2}-\d{1,2}$/', '生日格式不正确，请参考1980-1-1该格式'),
-		array('birthday', 'parse_birthday', '生日的日期超出了正常的日期范围', 1, 'callback'),
-		array('password', '6,16', '密码长度应在6到16之间', 1, 'length'),
-		array('repassword', 'password', '确认密码不正确', 1, 'confirm'),
-		array('phone', 'parse_phone', '手机号格式不正确', 1, 'callback'),
 
 		array('username', 'require', '必填姓名', 1),
 		array('phone', 'require', '必填手机', 1),
@@ -35,6 +25,16 @@ class CompanyMemberModel extends Model
 		array('address', 'require', '必填地址', 1),
 		array('install_type', 'require', '必填安装方式', 1),
 		array('install_way', 'require', '必填安装途径', 1),
+
+		array('username', 'require', '该姓名已存在', 1, 'unique'),
+		array('email', '/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/', '电子邮件格式不正确'),
+		array('phone', '/^[\d-\+]{10,15}$/', '手机格式不正确'),
+		array('idcard', '/^[a-zA-Z0-9-+]+$/', '证件号格式不正确'),
+		array('birthday', '/^\d{4}-\d{1,2}-\d{1,2}$/', '生日格式不正确，请参考1980-1-1该格式'),
+		array('birthday', 'parse_birthday', '生日的日期超出了正常的日期范围', 1, 'callback'),
+		array('password', '6,16', '密码长度应在6到16之间', 1, 'length'),
+		array('repassword', 'password', '确认密码不正确', 1, 'confirm'),
+		array('phone', 'parse_phone', '手机号格式不正确', 1, 'callback'),
 	);
 
 	protected function parse_phone($str)

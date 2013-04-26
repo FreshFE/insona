@@ -164,4 +164,17 @@ class AccountController extends Controller
 	{
 		Redirect::success('登录返回', Session::get('account_last_url'));
 	}
+
+	public function checkregister()
+	{
+		$model = D('CompanyMember');
+
+		if($data = $model->create())
+		{
+			$this->json(array('success' => 1));
+		}
+		else {
+			$this->json(array('success' => 0, 'error_msg' => $model->getError()));
+		}
+	}
 }
