@@ -26,7 +26,8 @@ class CompanyMemberModel extends Model
 		array('install_type', 'require', '必填安装方式', 1),
 		array('install_way', 'require', '必填安装途径', 1),
 
-		array('username', 'require', '该姓名已存在', 1, 'unique'),
+		array('username', 'require', '该姓名已存被注册', 1, 'unique'),
+		array('email', 'require', '该电子邮件已经被注册', 1, 'unique'),
 		array('email', '/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/', '电子邮件格式不正确'),
 		array('phone', '/^[\d-\+]{10,15}$/', '手机格式不正确'),
 		array('idcard', '/^[a-zA-Z0-9-+]+$/', '证件号格式不正确'),
