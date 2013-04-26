@@ -75,6 +75,10 @@ class ProductController extends Controller
 			$this->assign('user_id', Session::get('com_auth_key'));
 		}
 
+		// 检查相关驱动
+		$drivers = M('Driver')->where(array('hidden' => 1, 'driver_category_id' => $data['driver_id']))->select();
+		$this->assign('drivers', $drivers);
+
 		$this->display();
 	}
 }

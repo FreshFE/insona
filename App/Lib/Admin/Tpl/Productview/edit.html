@@ -43,6 +43,14 @@
 			</div>
 
 			<div class="control-group">
+				<label class="control-label">相关驱动的ID值</label>
+				<div class="controls">
+					<input type="text" name="driver_id" value="{{$data.driver_id}}">
+					<div class="help-block">将产品驱动栏目内的ID值输入此处，若输入错误ID或不存在该ID的话，将不显示驱动下载</div>
+				</div>
+			</div>
+
+			<div class="control-group">
 				<label class="control-label">封面</label>
 				<div class="controls">
 					<img src="{{Helper::img($data['coverpath'], $coverThumbSize)}}" id="J_cover">

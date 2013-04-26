@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+
+.products_install{
+	width:1005px;
+	margin: auto;
+	padding: 0px;
+}
+.products_description{
+	background-image: url(../images/product_004.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:138px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_description:hover{
+	background-image: url(../images/product_005.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:138px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_specifications{
+	background-image: url(../images/product_006.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_specifications:hover{
+	background-image: url(../images/product_007.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_drive{
+	background-image: url(../images/product_008.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_drive:hover{
+	background-image: url(../images/product_009.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}.products_download{
+	background-image: url(../images/product_010.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_download:hover{
+	background-image: url(../images/product_011.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.specifications_style{
+	float:left;
+	width:687px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 24px;
+	color: #777777;
+	padding-top: 40px;
+	padding-left: 160px;
+	padding-bottom: 60px;
+	padding-right: 158px;
+}
+.products_drive_div {
+	width: 24px;
+	padding-top: 1px;
+	padding-right:11px;
+	height: 19px;
+	float: left;
+	margin-left:100px;
+	margin-left:390px;
+}
+.products_description1{
+	background-image: url(../images/product_005.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:138px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_specifications1{
+	background-image: url(../images/product_007.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_drive1{
+	background-image: url(../images/product_009.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.products_download1{
+	background-image: url(../images/product_011.jpg);
+	padding-bottom:77px;
+	padding-left:83px;
+	margin-left:120px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float:left;
+}
+.drive_style{
+	float:left;
+	width:687px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 24px;
+	color: #777777;
+	padding-top: 61px;
+	padding-bottom: 250px;
+	padding-right: 158px;
+}
+.drive_style p {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 24px;
+	color: #777777;
+	margin-left:430px;
+	margin-bottom:20px;
+}
+
+.drive_num{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 23.05px;
+	color: #b8b8b8;
+	text-decoration: none;
+}
+.drive_num:hover{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 23.05px;
+	color: #a40001;
+	text-decoration: underline;
+}
