@@ -275,7 +275,7 @@ h4{
 	height: 25px;
 	background-image: url(../images/search.gif);
 	border: 1px none #FFF;
-	width: 213px;
+	width: 214px;
 	font-family: "微软雅黑";
 	font-size: 12px;
 	line-height: 25px;
@@ -612,8 +612,9 @@ h4{
 	float: left;
 	padding-top:100px;
 	width:290px;
-	padding-bottom:135px;
-	padding-right:94px;
+	padding-bottom:118px;
+	padding-right:78px;
+	padding-left: 16px;
 }
 .show2_p {
 	font-size: 40px;
@@ -647,9 +648,16 @@ h4{
 	padding-left:50px;
 }
 .show2_style{
-	height:275px;
 	float:left;
-	width:1005px;
+	width:687px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 24px;
+	color: #777777;
+	padding-top: 61px;
+	padding-left: 160px;
+	padding-bottom: 250px;
+	padding-right: 158px;
 }
 .show2_a{
 	font-family: "方正兰亭粗黑简体";
@@ -845,7 +853,7 @@ h4{
 .three_drive_a:hover {
 	font-family: "微软雅黑";
 	font-size: 12px;
-	line-height: 22px;
+	line-height: 23.05px;
 	color: #a40001;
 	text-decoration: underline;
 }
