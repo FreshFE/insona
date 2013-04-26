@@ -73,6 +73,13 @@ class ProductController extends Controller
 		if(Session::get('com_auth_key'))
 		{
 			$this->assign('user_id', Session::get('com_auth_key'));
+
+			$member = M('CompanyMember')->where(array('id' => Session::get('com_auth_key'), 'hidden' => 1))->find();
+			
+			if($member)
+			{
+				$this->assign('member', true);
+			}
 		}
 
 		// 检查相关驱动

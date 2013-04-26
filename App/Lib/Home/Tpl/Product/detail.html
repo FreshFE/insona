@@ -39,8 +39,13 @@
             </div>
             <br />
             {{if $user_id}}
+
+                {{if $member}}
                 <p class="show2_morey"><span class="show2_RMB">RMB</span> {{$data.price}}</p>
                 <a href="{{$data.link}}" class="show2_a" target="_blank"> 点击即可购买!</a>
+                {{else}}
+                <p class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">您已注册，但您的账号还未激活</p>
+                {{/if}}
             {{else}}
                 <a href="__GROUP__/account/register" class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">注册登录后即可查看产品的价格和购买链接</a>
             {{/if}}

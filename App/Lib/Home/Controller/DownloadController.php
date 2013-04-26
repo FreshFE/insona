@@ -14,10 +14,17 @@ class DownloadController extends Controller
 
 		$this->parse_is_vip('vip', 1);
 
-		// 检测是否登录
+		// 检查用户是否登录
 		if(Session::get('com_auth_key'))
 		{
 			$this->assign('user_id', Session::get('com_auth_key'));
+
+			$member = M('CompanyMember')->where(array('id' => Session::get('com_auth_key'), 'hidden' => 1))->find();
+			
+			if($member)
+			{
+				$this->assign('member', true);
+			}
 		}
 
 		$this->display();
@@ -50,5 +57,10 @@ class DownloadController extends Controller
 	public function noload()
 	{
 		Redirect::error('请先注册登录后，才可下载该内容');
+	}
+
+	public function noauth()
+	{
+		Redirect::error('您已注册，但您的账号未激活');
 	}
 }

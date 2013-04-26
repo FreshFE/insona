@@ -60,7 +60,11 @@
       		<ul>
                 {{foreach $vips as $data}}
                   {{if $user_id}}
-                  <li><a href="{{$data.link}}"><img src="{{Helper::img($data['coverpath'], '290x156')}}" alt="{{$data.title}}"/>{{$data.title}}</a></li>
+                    {{if $member}}
+                      <li><a href="{{$data.link}}"><img src="{{Helper::img($data['coverpath'], '290x156')}}" alt="{{$data.title}}"/>{{$data.title}}</a></li>
+                    {{else}}
+                      <li><a href="__URL__/noauth"><img src="{{Helper::img($data['coverpath'], '290x156')}}" alt="{{$data.title}}"/>{{$data.title}}</a></li>
+                    {{/if}}
                   {{else}}
                   <li><a href="__URL__/noload"><img src="{{Helper::img($data['coverpath'], '290x156')}}" alt="{{$data.title}}"/>{{$data.title}}</a></li>
                   {{/if}}
@@ -72,9 +76,9 @@
                     <span class="down_a1">&nbsp;{{$key}}</span>
                     {{else}}
                       {{if $user_id}}
-                      <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
+                        <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                       {{else}}
-                      <a href="__URL__/noload" class="down_a">{{$key}}&nbsp;&nbsp;</a>
+                        <a href="__URL__/noload" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                       {{/if}}
                     {{/if}}
                 {{/foreach}}
