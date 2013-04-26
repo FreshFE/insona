@@ -13,6 +13,11 @@ class CompanyMemberModel extends Model
 
 	protected $_validate = array(
 		
+		array('username', 'require', '该姓名已存在', 1, 'unique'),
+		array('password', '6,16', '密码长度应在6到16之间', 1, 'length'),
+		array('repassword', 'password', '确认密码不正确', 1, 'confirm'),
+		array('phone', 'parse_phone', '手机号格式不正确', 1, 'callback'),
+
 		array('username', 'require', '必填姓名', 1),
 		array('phone', 'require', '必填手机', 1),
 		array('company', 'require', '必填公司名称', 1),
@@ -25,9 +30,17 @@ class CompanyMemberModel extends Model
 		array('address', 'require', '必填地址', 1),
 		array('install_type', 'require', '必填安装方式', 1),
 		array('install_way', 'require', '必填安装途径', 1),
-		
-		array('username', 'require', '该姓名已存在', 1, 'unique'),
-		array('password', '6,16', '密码长度应在6到16之间', 1, 'length'),
-		array('repassword', 'password', '确认密码不正确', 1, 'confirm')
 	);
+
+	protected function parse_phone($str)
+	{
+
+		if(is_numeric($str))
+		{
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
