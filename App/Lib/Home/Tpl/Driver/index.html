@@ -60,68 +60,50 @@
         {{/if}}
         
         {{/foreach}}
-        
-       <!-- <div class="drive_logo1">
-        	<img src="@/assets/images/drive_002.JPG"/>  
-   	  </div>
-        
-        <div class="drive_body">
-        	<p><span class="three_span1">索尼功放系</span></p>
-			<p class="driver_p">苏州英纳索科技有限公司是一家从事嵌入式工业计算机及自动化控制设计的，开发，销售的高科技公司。公司继承了自动控制领域的经验，融入了当今最先进的智能控制系统的研究设计人员......</p>
-            <p class="p_call">&nbsp;</p>
-            <div class="three_sony_div">
- 				<img src="@/assets/images/three_inside_002.gif" width="26" height="19"/>
-           	</div>
-            <a href="#" class="three_drive_a">系列1</a><span class="driver_span">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <a href="#" class="three_drive_a">系列2</a><span class="driver_span">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <a href="#" class="three_drive_a">系列3</a>
-    	</div>
-        <img src="@/assets/images/down_009.gif" width="952" />
-        
-        
-       <div class="drive_logo1">
-        	<img src="@/assets/images/drive_003.JPG"/>  
-   	  </div>
-        
-        <div class="drive_body">
-        	<p><span class="three_span1">电机</span></p>
-			<p class="driver_p">苏州英纳索科技有限公司是一家从事嵌入式工业计算机及自动化控制设计的，开发，销售的高科技公司。公司继承了自动控制领域的经验，融入了当今最先进的智能控制系统的研究设计人员......</p>
-            <p class="p_call">&nbsp;</p>
-            <div class="three_sony_div">
- 				<img src="@/assets/images/three_inside_002.gif" width="26" height="19"/>
-           	</div>
-            <a href="#" class="three_drive_a">系列1</a><span class="driver_span">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <a href="#" class="three_drive_a">系列2</a><span class="driver_span">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <a href="#" class="three_drive_a">系列3</a>
-    	</div> -->
-        
-    
-    
+
       <div class="line"></div>
         
-		<div class="all_page">
-    		<div class="all_page_img">
+		{{if $pager.totalPages > 1}}
+    <div class="container1">
+      <div class="all_page">
+        <div class="all_page_img">
                 <img src="@/assets/images/page_001.gif" align="right" />
-       	  </div>
-          	<div class="all_page_1">
-               	<a href="#" class="all_page_p">Previous</a></div>
+            </div>
+            <div class="all_page_1">
+                {{if $pager.preLink !== 0}}
+                <a href="{{$pager.preLink}}" class="all_page_p">Previous</a>
+                {{else}}
+                <span class="all_page_p" style="text-decoration: none;">Previous</span>
+                {{/if}}
+            </div>
                     
-           	<div class="all_page_img1">
-               	<img src="@/assets/images/page_002.gif" /></div>
+            <div class="all_page_img1">
+                <img src="@/assets/images/page_002.gif" /></div>
                     
-            <div class="all_page_2">Page
-                <input name="page" type="text" class="all_pagetext" value="2" /> of &nbsp; 11</div>
+            <div class="all_page_2">
+                <form action="__SELF__" method="get">
+                    Page
+                    <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalPages}}
+                </form>
+            </div>
                 
             <div class="all_page_img1">
                 <img src="@/assets/images/page_002.gif" /></div>
                     
             <div class="all_page_3">
-               	<a href="#" class="all_page_p">Next</a></div>
+                {{if $pager.nextLink !== 0}}
+                <a href="{{$pager.nextLink}}" class="all_page_p">Next</a>
+                {{else}}
+                <span class="all_page_p" style="text-decoration: none;">Next</span>
+                {{/if}}
+            </div>
             <div class="all_page_img2">
-               	<img src="@/assets/images/page_004.gif" align="left" />
+                <img src="@/assets/images/page_004.gif" align="left" />
             </div>
         </div>
     </div>
+    {{/if}}
+</div>
     
     
     <div class="footer_container" >

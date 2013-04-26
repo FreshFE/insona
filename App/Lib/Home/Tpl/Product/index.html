@@ -74,46 +74,6 @@
 
     {{/foreach}}
 
-    <!-- <div class="container1">
-    	<div class="show_product">
-        	<img src="@/assets/images/product_001.JPG" />
-        </div>
-        
-        <div class="show_minutf">
-        	<p class="show_minutf_p">接收器</p>
-        	<p class="three_p">苏州英纳索科技有限公司是一家从事嵌入式工业计算机及自动化控制设计的，开发，销售的高科技公司。<br />公司继承了自动控制领域的经验，融入了当今最先进的智能控制系统的研究设计人员,在智能家居高端产品的运用和开发，有着先进的实践经验。</p>
-            <p class="three_p1">&nbsp;</p><p class="three_p1">&nbsp;</p>
-        	<a href="products_1.html"><img src="@/assets/images/product_002.gif" class="show_img" /></a>
-        </div>
-	</div> -->
-    
-    
-    <!-- <div class="bakc_colour" >
-    	<div class="container1">
-        	<div class="show_minutf">
-        		<p class="show_minutf_p">接收器</p>
-        		<p class="three_p">苏州英纳索科技有限公司是一家从事嵌入式工业计算机及自动化控制设计的，开发，销售的高科技公司。<br />公司继承了自动控制领域的经验，融入了当今最先进的智能控制系统的研究设计人员,在智能家居高端产品的运用和开发，有着先进的实践经验。</p>
-            	<p class="three_p1">&nbsp;</p><p class="three_p1">&nbsp;</p>
-        		<a href="products_1.html"><img src="@/assets/images/product_002.gif" class="show_img" /></a>
-        	</div>
-  			<div class="show_product1">
-        		<img src="@/assets/images/product_002.JPG" width="394" height="423" />
-        	</div>
-  		</div>  
-	</div>   
-    
-    <div class="container1">
-    	<div class="show_product">
-        	<img src="@/assets/images/product_003.JPG" width="390" height="423" />
-        </div>
-        
-        <div class="show_minutf">
-        	<p class="show_minutf_p">接收器</p>
-        	<p class="three_p">苏州英纳索科技有限公司是一家从事嵌入式工业计算机及自动化控制设计的，开发，销售的高科技公司。<br />公司继承了自动控制领域的经验，融入了当今最先进的智能控制系统的研究设计人员,在智能家居高端产品的运用和开发，有着先进的实践经验。</p>
-            <p class="three_p1">&nbsp;</p><p class="three_p1">&nbsp;</p>
-        	<a href="products_1.html"><img src="@/assets/images/product_002.gif" class="show_img" /></a>
-        </div>
-	</div> -->
 <div class="line"></div>
     
     {{if $pager.totalPages > 1}}
@@ -133,8 +93,12 @@
            	<div class="all_page_img1">
                	<img src="@/assets/images/page_002.gif" /></div>
                     
-            <div class="all_page_2">Page
-                <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalPages}}</div>
+            <div class="all_page_2">
+                <form action="__SELF__" method="get">
+                    Page
+                    <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalPages}}
+                </form>
+            </div>
                 
             <div class="all_page_img1">
                 <img src="@/assets/images/page_002.gif" /></div>

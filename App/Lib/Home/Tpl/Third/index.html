@@ -61,30 +61,46 @@
     <div class="line"></div>
     
     
- 	<div class="container1">
-    	<div class="all_page">
-    		<div class="all_page_img">
+ 	{{if $pager.totalPages > 1}}
+    <div class="container1">
+      <div class="all_page">
+        <div class="all_page_img">
                 <img src="@/assets/images/page_001.gif" align="right" />
-               	</div>
-          	<div class="all_page_1">
-               	<a href="#" class="all_page_p">Previous</a></div>
+            </div>
+            <div class="all_page_1">
+                {{if $pager.preLink !== 0}}
+                <a href="{{$pager.preLink}}" class="all_page_p">Previous</a>
+                {{else}}
+                <span class="all_page_p" style="text-decoration: none;">Previous</span>
+                {{/if}}
+            </div>
                     
-           	<div class="all_page_img1">
-               	<img src="@/assets/images/page_002.gif" /></div>
+            <div class="all_page_img1">
+                <img src="@/assets/images/page_002.gif" /></div>
                     
-            <div class="all_page_2">Page
-                <input name="page" type="text" class="all_pagetext" value="2" /> of &nbsp; 11</div>
+            <div class="all_page_2">
+                <form action="__SELF__" method="get">
+                    Page
+                    <input name="page" type="text" class="all_pagetext" value="{{$pager.nowPage}}" /> of &nbsp; {{$pager.totalPages}}
+                </form>
+            </div>
                 
             <div class="all_page_img1">
                 <img src="@/assets/images/page_002.gif" /></div>
                     
             <div class="all_page_3">
-               	<a href="#" class="all_page_p">Next</a></div>
+                {{if $pager.nextLink !== 0}}
+                <a href="{{$pager.nextLink}}" class="all_page_p">Next</a>
+                {{else}}
+                <span class="all_page_p" style="text-decoration: none;">Next</span>
+                {{/if}}
+            </div>
             <div class="all_page_img2">
-               	<img src="@/assets/images/page_004.gif" align="left" />
+                <img src="@/assets/images/page_004.gif" align="left" />
             </div>
         </div>
     </div>
+    {{/if}}
     
     
    <div class="footer_container" >
