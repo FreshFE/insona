@@ -15,6 +15,8 @@ return array(
 		'@/images' 	=> '/upload/images'
 	),
 
+	'PROJ_THUMB_LINK' => '/assets/images/noimage.jpg',
+
 	/**
 	 * 项目缩略图名称和配置类型
 	 */
