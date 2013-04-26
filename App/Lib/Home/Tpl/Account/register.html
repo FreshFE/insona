@@ -17,7 +17,10 @@
                 
       {{include file="../Bases/account.html"}}
 		</ul>
-		<input name="serch" type="text" class="all_text1" />
+		<form action="__GROUP__/search" method="get">
+        {{C('TOKEN_ON', false)}}
+        <input name="q" type="text" class="all_text1" />
+    </form>
 	
     	<div class="propose_us_body">
     	 	<p>&nbsp;</p>
@@ -140,12 +143,10 @@
         </div>
         <div class="register_text3">
        		<p align="left">
-            	<label>
-  					<input type="radio" name="install_type" value="住宅" class="radio" checked="checked" />
+  					<input type="radio" name="install_type" value="住宅" class="radio" />
 					住宅&nbsp;&nbsp;&nbsp;&nbsp;	
  					<input type="radio" name="install_type" value="轻型商用" class="radio" />
 					轻型商用
-                </label>
                 <img src="@/assets/images/register_004.gif"  class="register_lable_img"/>
             </p>
         </div>

@@ -19,7 +19,10 @@
                 
       {{include file="../Bases/account.html"}}
 		</ul>
-		<input name="serch" type="text" class="all_text1" />
+		<form action="__GROUP__/search" method="get">
+        {{C('TOKEN_ON', false)}}
+        <input name="q" type="text" class="all_text1" />
+    </form>
 	
     	<div class="propose_us_body">
    		  <img src="@/assets/images/three_inside_001.gif" class="three_inside_img" />

@@ -64,7 +64,10 @@
 			<li class="container_ul_li"><a href="__GROUP__/support"class="container_ul_li_a">反馈与建议</a></li>
 			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">关于我们</a></li>
       </ul>
-            <input name="serch" type="text" class="index_text" />
+            <form action="__GROUP__/search" method="get">
+                {{C('TOKEN_ON', false)}}
+                <input name="q" type="text" class="index_text" />
+            </form>
            
     	</div>
         </div>

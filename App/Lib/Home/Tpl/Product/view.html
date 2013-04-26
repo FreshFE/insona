@@ -19,7 +19,10 @@
                 
       {{include file="../Bases/account.html"}}
 		</ul>
-			<input name="serch" type="text" class="all_text" />
+			<form action="__GROUP__/search" method="get">
+          {{C('TOKEN_ON', false)}}
+          <input name="q" type="text" class="all_text1" />
+      </form>
 			<div class="down_logo">
         		<div class="show1_banner">
     				<p class="down_logo_p">

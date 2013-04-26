@@ -19,7 +19,10 @@
                 
             {{include file="../Bases/account.html"}}
 		</ul>
-		<input name="serch" type="text" class="all_text1" />
+		<form action="__GROUP__/search" method="get">
+        {{C('TOKEN_ON', false)}}
+        <input name="q" type="text" class="all_text1" />
+    </form>
     	<div class="three_logo">
     		<p><img src="@/assets/images/three_001.gif"/><p class="all_p_styl">&nbsp;</p>
           		我们提供我公司自己研发的产品驱动，您可以通过下载并网上购买我们的驱动，来实现产品的升级等其他附属功能。
