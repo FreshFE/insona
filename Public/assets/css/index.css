@@ -1,0 +1,49 @@
+#fade_focus ul {
+	display: none;
+}
+.Slideshow_b1,.Slideshow_b2{
+	display:block;
+	float:left;
+	padding:2px 6px 12px;
+	margin-right:3px;
+	color:#FFFFFF;
+	text-decoration:none;
+	cursor:pointer;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+	background: url(../images/button_slidernav_1.png) no-repeat left;
+}
+.Slideshow_b2{
+	background: url(../images/button_slidernav_2.png) no-repeat left;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+.Slideshow_d1{
+	overflow:hidden;
+	position:relative;
+}
+
+.Slideshow_num_list{
+	position:absolute;
+	width:100%;
+	left:0px;
+	bottom:-1px;
+	color:#FFFFFF;
+	font-size:12px;
+	padding:4px 0px;
+	height:18px;
+	overflow:hidden;
+	float: left;
+}
+.Slideshow_button{
+	position:absolute;
+	z-index:1000;
+	right:0px;
+	bottom:10px;
+	font-size:13px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-right:50%;	
+}
