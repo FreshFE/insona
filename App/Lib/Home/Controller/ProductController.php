@@ -22,7 +22,6 @@ class ProductController extends Controller
 
 		$product = M('Introduction')->find(2);
 		$this->assign('product', $product);
-		dump($product);
 
 		$this->display();
 	}
