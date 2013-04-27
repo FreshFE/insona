@@ -61,7 +61,7 @@
     	<div class="index_summary">
     		<img src="@/assets/images/index_003.gif"/><p class="p_call">&nbsp;</p>
             	<p class="three_p1">
-                    {{$intro.content}}
+                    {{Helper::mssubstr(strip_tags($intro['content']), 200, true)}}
 				</p>
    			</div>
    		<div class="index_summary_img">
@@ -78,7 +78,7 @@
         <div class="index_show1">
     		<img src="@/assets/images/index_006.gif"/><p class="p_call">&nbsp;</p>
             	<p class="three_p1">
-                    {{$product.content}}
+                    {{Helper::mssubstr(strip_tags($product['content']), 120, true)}}
 				</p>
         </div>
     </div>

@@ -40,7 +40,7 @@
 
        		<p class="p" align="left">
             	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题：&nbsp;&nbsp;
-            	<input name="title" type="text" class="propose_text" />&nbsp;&nbsp;24个字符内
+            	<input name="title" type="text" class="propose_text" id="J_input" maxlength="24" />&nbsp;&nbsp;<span id="J_input_num">24</span>个字符内
 				<br /><span class="propose_span">产品型号：</span>
 					<select name="product" class="seltxt">
             {{foreach $datas as $data}}
@@ -53,9 +53,9 @@
 			<div class="propose_div">
             	<p class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容：&nbsp;&nbsp;</p>
             </div>
-            	<textarea name="content" cols="" rows="1" class="propose_text1" style="overflow-y:hidden"></textarea>
+            	<textarea name="content" cols="" rows="1" class="propose_text1" style="overflow-y:hidden" id="J_textarea" maxlength="200"></textarea>
             <div class="propose_div1">			
-            	&nbsp;&nbsp;200个字符内
+            	&nbsp;&nbsp;<span id="J_textarea_num">200</span>个字符内
             </div>
     	</div>
         <input type="submit" class="propose_btn" value=""/>
@@ -73,5 +73,17 @@
     </div>
 
     {{include file="../Bases/tip.html"}}
+
+    <!--
+    <script type="text/javascript" src="@/assets/js/jquery.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        $('#J_input').on('keyup', function() {
+          console.log($(this).val().length);
+        });
+      });
+    </script>
+    -->
 </body>
 </html>
