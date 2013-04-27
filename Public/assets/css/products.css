@@ -106,7 +106,7 @@
 	margin-left:100px;
 	margin-left:390px;
 }
-.products_description1{
+.products_description.active {
 	background-image: url(../images/product_005.jpg);
 	padding-bottom:77px;
 	padding-left:83px;
@@ -116,7 +116,7 @@
 	background-repeat: no-repeat;
 	float:left;
 }
-.products_specifications1{
+.products_specifications.active{
 	background-image: url(../images/product_007.jpg);
 	padding-bottom:77px;
 	padding-left:83px;
@@ -126,7 +126,7 @@
 	background-repeat: no-repeat;
 	float:left;
 }
-.products_drive1{
+.products_drive.active{
 	background-image: url(../images/product_009.jpg);
 	padding-bottom:77px;
 	padding-left:83px;
@@ -136,7 +136,7 @@
 	background-repeat: no-repeat;
 	float:left;
 }
-.products_download1{
+.products_download.active{
 	background-image: url(../images/product_011.jpg);
 	padding-bottom:77px;
 	padding-left:83px;

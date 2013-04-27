@@ -30,12 +30,12 @@
     
 	<div class="container1">
     	<div class="show2_logo">
-        	<img src="{{Helper::img($data['coverpath'])}}" width="470" />
+        	<img src="{{Helper::img($data['coverpath'], '470x350')}}" width="470" />
         </div>
         <div class="show2_body">
             <span class="show2_p">{{$data.title}}</span><br /><br />
             <div style="line-height: 20px;">
-                {{Helper::mssubstr($data['content'], 200, true)}}
+                {{Helper::mssubstr(strip_tags($data['content']), 120, true)}}
             </div>
             <br />
             {{if $user_id}}
@@ -52,7 +52,7 @@
         </div>
         <div style="clear: both;"></div>
         <div class="products_install" id="J_tabs_control">
-        	<a href="products_description.html" class="products_description" data-id="1">&nbsp;</a>
+        	<a href="products_description.html" class="products_description active" data-id="1">&nbsp;</a>
        	  	<a href="products_specifications.html" class="products_specifications" data-id="2">&nbsp;</a>
    		  	<a href="products_drive.html" class="products_drive" data-id="3">&nbsp;</a>
           	<a href="products_download.html" class="products_download" data-id="4">&nbsp;</a>
@@ -105,6 +105,10 @@
             $('#J_tabs_control').delegate('> a', 'click', function() {
 
                 var id = $(this).data('id');
+
+                $(this).parent().children().removeClass('active');
+
+                $(this).addClass('active');
                 
                 $('#J_tabs').children().hide();
 

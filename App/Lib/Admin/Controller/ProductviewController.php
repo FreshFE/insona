@@ -10,7 +10,7 @@ class ProductviewController extends Controller
 
 	protected $image_thumb_name = 'thumb';
 
-	protected $cover_thumb_name = '215x100';
+	protected $cover_thumb_name = '215x100,470x350';
 
 	protected $category_model = 'ProductDriver';
 

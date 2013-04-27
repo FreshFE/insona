@@ -20,6 +20,10 @@ class ProductController extends Controller
 		$pager = $model->where($condition)->pager($page, $listRow);
 		$this->assign('pager', $pager);
 
+		$product = M('Introduction')->find(2);
+		$this->assign('product', $product);
+		dump($product);
+
 		$this->display();
 	}
 
