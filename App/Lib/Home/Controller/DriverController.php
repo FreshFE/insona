@@ -23,6 +23,10 @@ class DriverController extends Controller
 		$pager = $model->where($condition)->pager($page, $listRow);
 		$this->assign('pager', $pager);
 
+		// 介绍信息
+		$intro = M('Introduction')->find(4);
+		$this->assign('intro', $intro);
+
 		$this->display();
 	}
 }

@@ -31,7 +31,9 @@
          			</p>
             	</div>
   			<div class="down_body">
-           		<p class="three_p1">您可以在这里下载到您想下载的软件，如果是我们的会员，即可得到更专业版的软件，期待您的加入!</p>
+           		<p class="three_p1">
+                {{Helper::mssubstr(strip_tags($intro['content']), 80, true)}}
+              </p>
 			</div>
 		</div>
     </div>
@@ -46,6 +48,7 @@
 		  	</ul>
 
         	<p class="down_vip_p">
+              {{if $novips_pager.totalPages > 1}}
                 {{foreach $novips_pager.numLink as $key => $data}}
                     {{if $data === 0}}
                     <span class="down_a1">&nbsp;{{$key}}</span>
@@ -53,6 +56,7 @@
                     <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                     {{/if}}
                 {{/foreach}}
+              {{/if}}
             </p>
         	<img src="@/assets/images/down_009.gif" width="952" />
 
@@ -71,17 +75,15 @@
                 {{/foreach}}
     	 	</ul> 
             <p class="down_vip_p">
+              {{if $vips_pager.totalPages > 1}}
             	{{foreach $vips_pager.numLink as $key => $data}}
                     {{if $data === 0}}
-                    <span class="down_a1">&nbsp;{{$key}}</span>
+                      <span class="down_a1">&nbsp;{{$key}}</span>
                     {{else}}
-                      {{if $user_id}}
-                        <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
-                      {{else}}
-                        <a href="__URL__/noload" class="down_a">{{$key}}&nbsp;&nbsp;</a>
-                      {{/if}}
+                      <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                     {{/if}}
                 {{/foreach}}
+                {{/if}}
             </p>     
 		</div>
     </div>

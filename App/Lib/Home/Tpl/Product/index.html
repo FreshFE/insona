@@ -48,7 +48,9 @@
         <div class="container1">
             <div class="show_minutf">
                 <p class="show_minutf_p">{{$data.title}}</p>
-                <p class="three_p">{{$data.content}}</p>
+                <p class="three_p">
+                    {{Helper::mssubstr(strip_tags($data['content']), 80, true)}}
+                </p>
                 <p class="three_p1">&nbsp;</p><p class="three_p1">&nbsp;</p>
                 <a href="__GROUP__/product/view/aid/{{$data.id}}"><img src="@/assets/images/product_002.gif" class="show_img" /></a>
             </div>
@@ -66,7 +68,9 @@
         
         <div class="show_minutf">
             <p class="show_minutf_p">{{$data.title}}</p>
-            <p class="three_p">{{$data.content}}</p>
+            <p class="three_p">
+                {{Helper::mssubstr(strip_tags($data['content']), 80, true)}}
+            </p>
             <p class="three_p1">&nbsp;</p><p class="three_p1">&nbsp;</p>
             <a href="__GROUP__/product/view/aid/{{$data.id}}"><img src="@/assets/images/product_002.gif" class="show_img" /></a>
         </div>

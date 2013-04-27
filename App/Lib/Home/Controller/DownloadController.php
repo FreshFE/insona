@@ -27,6 +27,10 @@ class DownloadController extends Controller
 			}
 		}
 
+		// 介绍信息
+		$intro = M('Introduction')->find(6);
+		$this->assign('intro', $intro);
+
 		$this->display();
 	}
 
