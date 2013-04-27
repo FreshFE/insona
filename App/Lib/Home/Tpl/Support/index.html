@@ -25,7 +25,9 @@
 	
     	<div class="propose_us_body">
    	   		<img src="@/assets/images/propoce_001.gif" class="propose_img" /><br /><br />
-            <p class="propose_p">诚邀您对我们产品做出实际的评价，我们会综合客户的评价，为产品做出更好的改良。</p>
+            <p class="propose_p">
+              {{Helper::mssubstr(strip_tags($intro['content']), 80, true)}}
+            </p>
             <p>&nbsp;</p>
        </div>
     </div>

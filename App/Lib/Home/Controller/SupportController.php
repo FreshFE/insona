@@ -19,6 +19,10 @@ class SupportController extends Controller
 		$datas = M('Product')->select();
 		$this->assign('datas', $datas);
 
+		// 联系信息
+		$intro = M('Introduction')->find(7);
+		$this->assign('intro', $intro);
+
 		$this->display();
 	}
 
