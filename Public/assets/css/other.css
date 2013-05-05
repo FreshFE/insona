@@ -169,3 +169,34 @@ body {
 	background-position: 0px;
 	float:left;
 }
+.find_pwd_img{
+	padding-top:64px;
+	padding-bottom:7px;
+}
+.find_pwd_img1 {
+	margin-left: 250px;
+}
+.find_pwd_p{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #999999;
+	line-height: 5.05px;
+}
+.find_pwd_text {
+	border:2px none #F60;
+	width:434px;
+	height:36px;
+	font-size:12px;
+	line-height:32px;
+	padding-left: 10px;
+	padding-top: 2px;
+	color: #777777;
+	margin-bottom: 13px;
+	background-image: url(../images/find_password_002.gif);
+	background-repeat: no-repeat;
+	background-position: 0px;
+	float:left;
+}
+.find_pwd_spacing{
+	margin-bottom:20px;
+}
