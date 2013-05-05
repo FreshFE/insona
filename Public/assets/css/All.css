@@ -5,7 +5,6 @@ body {
 	font-size: 12px;
 	color: #777777;
 	padding: 0px;
-	overflow-x: hidden;
 }
 ul { list-style:none;}
 ul,h1,form,p {
@@ -606,7 +605,7 @@ h4{
 	float: left;
 	width: 545px;
 	padding-left: 75px;
-	padding-top:125px;
+	padding-top:65px;
 }
 .show2_body {
 	float: left;
@@ -1194,7 +1193,9 @@ h4{
 	padding-right: 70px;
 	padding-top: 0px;
 	padding-left: 77px;
-	width: 100%;
+	width:810px;
+	padding-right:120px;
+
 }
 
 .propose_text1 {
