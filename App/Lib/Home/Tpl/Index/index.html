@@ -60,9 +60,9 @@
     <div class="container1">
     	<div class="index_summary">
     		<img src="@/assets/images/index_003.gif"/><p class="p_call">&nbsp;</p>
-            	<p class="three_p1">
-                    {{Helper::mssubstr(strip_tags($intro['content']), 200, true)}}
-				</p>
+                <div style="line-height: 22px; color: #777;">
+                    {{$intro['content']}}
+                </div>
    			</div>
    		<div class="index_summary_img">
         	<img src="@/assets/images/index_002.gif" />
