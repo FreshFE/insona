@@ -42,6 +42,21 @@
 				</div>
 			</div>
 
+			<div class="control-group">
+				<label class="control-label">banner logo</label>
+				<div class="controls">
+					<img src="{{Helper::img($data['cover_requirement'], '250x44')}}" id="J_cover_requirement">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">上传 banner logo</label>
+				<div class="controls">
+					<input type="file" id="J_uploadCover_requirement" name="cover_upload">
+					<div class="help-block">上传需使用jpg或png的图片</div>
+				</div>
+			</div>
+
 			<div class="form-actions">
 				<input type="hidden" name="id" value="{{$data.id}}">
 				<button type="submit" class="btn btn-primary">保存设置</button>
@@ -77,6 +92,15 @@
 				$('#J_cover').attr('src', "@/images/{{$coverThumbSize}}/" + info.name);
 			};
 			uploadCover.upload('__URL__/cover');
+
+			// 上传需求规格
+			var uploadCover = new UploadImg('#J_uploadCover_requirement');
+			uploadCover.config.formData = { 'id': {{$smarty.get.id}} };
+			uploadCover.onUploadSuccess = function(file, data, response) {
+				var info = $.parseJSON(data);
+				$('#J_cover_requirement').attr('src', "@/images/250x44/" + info.name);
+			};
+			uploadCover.upload('__URL__/coverlogo');
 
 			// 日期选择器
 			$('#J_datepicker').datepicker({

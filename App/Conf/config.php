@@ -39,6 +39,7 @@ return array(
 		'166x60' => array(166, 60, 'both'),
 		'208x193' => array(208, 193, 'both'),
 		'332x120' => array(332, 120, 'both'),
+		'250x44' => array(250, 44, 'both'),
 
 		// Download
 		'290x156' => array(290, 156, 'both'),
