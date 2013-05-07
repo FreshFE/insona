@@ -1096,6 +1096,10 @@ h4{
 	color: #777777;
 	line-height:25px;
 }
+.register_text.no-input {
+	background-image: url(../images/register_004.gif);
+	background-position: right;
+}
 .register_seltxt {
 	height: 28px;
 	width: 243px;
