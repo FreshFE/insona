@@ -170,6 +170,11 @@ class AccountController extends Controller
 	public function post_findpassword()
 	{
 		$model = M('Forget');
+
+		if($_POST['password'] != $_POST['repassword'])
+		{
+			Redirect::error('两次密码不相同');
+		}
 		
 		if(isset($_POST['code']))
 		{
