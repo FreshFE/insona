@@ -1,6 +1,6 @@
 <?php
 
-use Smartadmin\Controller\Content as Controller;
+use Think\Controller as Controller;
 use Think\Session as Session;
 
 class WidgetController extends Controller {
