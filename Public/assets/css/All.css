@@ -28,6 +28,9 @@ h4{
 	color: #777777;
 	line-height: 45.49px;
 }
+a img {
+	border: 0;
+}
 .footer {
 	margin-right: 0px;
 	margin-left: 0px;
