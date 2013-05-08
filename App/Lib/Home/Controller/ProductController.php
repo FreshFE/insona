@@ -40,7 +40,7 @@ class ProductController extends Controller
 		$model = M('Product');
 		$condition['hidden'] = 1;
 		$page = $_GET['page'] ? $_GET['page'] : 1;
-		$listRow = 6;
+		$listRow = 4;
 
 
 		$datas = $model->where($condition)->page($page, $listRow)->select();
