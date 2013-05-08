@@ -51,9 +51,16 @@
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">封面</label>
+				<label class="control-label">二级封面</label>
 				<div class="controls">
 					<img src="{{Helper::img($data['coverpath'], $coverThumbSize)}}" id="J_cover">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">三级封面</label>
+				<div class="controls">
+					<img src="{{Helper::img($data['coverpath'], '475x386')}}" id="J_cover2">
 				</div>
 			</div>
 
@@ -113,6 +120,7 @@
 			uploadCover.onUploadSuccess = function(file, data, response) {
 				var info = $.parseJSON(data);
 				$('#J_cover').attr('src', "@/images/{{$coverThumbSize}}/" + info.name);
+				$('#J_cover2').attr('src', "@/images/475x386/" + info.name);
 			};
 			uploadCover.upload('__URL__/cover');
 
