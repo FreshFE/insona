@@ -98,7 +98,7 @@
         </div>
         <div class="index_trends">
         	<img src="@/assets/images/index_005.gif" /><p class="p_call">&nbsp;</p>
-            	<p class="three_p1">谢谢大家对我们insona产品的关注，我<br />们会陆续推出新品，敬请期待！</p>
+            	<a href="http://weibo.com/3032982257" class="weibo_href" target="_blank">{{$weibo}}</a>
             	<br /><br />
             <!-- <a href="#" class="a"><img src="@/assets/images/index_003.jpg" /></a> -->
             <wb:follow-button uid="3032982257" type="red_1" width="67" height="24" ></wb:follow-button>
@@ -116,6 +116,19 @@
     </div>
 
     {{include file="../Bases/tip.html"}}
+
+    <style type="text/css">
+        a.weibo_href {
+            color: #777777;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            line-height: 22px;
+            text-decoration: none;
+        }
+        a.weibo_href:hover {
+            text-decoration: underline;
+        }
+    </style>
 </body>
 </html>
 

@@ -28,7 +28,6 @@ class IndexController extends Controller
 		$this->assign('contact', $contact);
 
 		// 输出微博
-		/*
         $weibo = $this->getWeibo();
         $weibo = json_decode($weibo);
         $weibo = $weibo->statuses;
@@ -36,7 +35,6 @@ class IndexController extends Controller
         $weibo = $weibo->text;
 
         $this->assign("weibo", $weibo);
-        */
 
 		$this->display();
 	}
@@ -73,7 +71,7 @@ class IndexController extends Controller
         // dump(curl_version());
 
         // 设置你需要抓取的URL
-        curl_setopt($curl, CURLOPT_URL, 'https://api.weibo.com/2/statuses/user_timeline.json?source=3966378850&count=1&feature=0&trim_user=1&uid=2998852340');
+        curl_setopt($curl, CURLOPT_URL, 'https://api.weibo.com/2/statuses/user_timeline.json?source=3885740577&count=1&feature=0&trim_user=1&uid=3032982257');
 
         // 设置header
         // curl_setopt($curl, CURLOPT_HEADER, 1);
@@ -86,7 +84,7 @@ class IndexController extends Controller
         // curl_easy_setopt(m_hcURL, CURLOPT_ISSUERCERT,"curl-ca-bundle.cer")); 
 
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_USERPWD, 'yovofashion@sina.com:yovofashion');
+        curl_setopt($curl, CURLOPT_USERPWD, '513653479@qq.com:8987521min');
 
         // 运行cURL，请求网页
         $data = curl_exec($curl);
