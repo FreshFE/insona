@@ -47,7 +47,7 @@
                 {{/foreach}}
 		  	</ul>
 
-        	<p class="down_vip_p">
+        	<div class="down_vip_p">
               {{if $novips_pager.totalPages > 1}}
                 {{foreach $novips_pager.numLink as $key => $data}}
                     {{if $data === 0}}
@@ -56,8 +56,17 @@
                     <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                     {{/if}}
                 {{/foreach}}
+                {{if $novips_pager.totalPages > 3}}
+                <span>...</span>
+                <a href="{{$novips_pager.endLink}}" class="down_a">{{$novips_pager.totalPages}}&nbsp;&nbsp;</a>
+                {{/if}}
+                &nbsp;&nbsp;
+                <form action="__SELF__" method="get" style="display: inline;">
+                  跳转至&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
+                </form>
               {{/if}}
-            </p>
+            </div>
+
         	<img src="@/assets/images/down_009.gif" width="952" />
 
   			<p class="down_p">&nbsp;会员区</p>
@@ -74,7 +83,7 @@
                   {{/if}}
                 {{/foreach}}
     	 	</ul> 
-            <p class="down_vip_p">
+            <div class="down_vip_p">
               {{if $vips_pager.totalPages > 1}}
             	{{foreach $vips_pager.numLink as $key => $data}}
                     {{if $data === 0}}
@@ -83,8 +92,16 @@
                       <a href="{{$data}}" class="down_a">{{$key}}&nbsp;&nbsp;</a>
                     {{/if}}
                 {{/foreach}}
+                {{if $vips_pager.totalPages > 3}}
+                <span>...</span>
+                <a href="{{$vips_pager.endLink}}" class="down_a">{{$vips_pager.totalPages}}&nbsp;&nbsp;</a>
                 {{/if}}
-            </p>     
+                &nbsp;&nbsp;
+                <form action="__SELF__" method="get" style="display: inline;">
+                  跳转至&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
+                </form>
+                {{/if}}
+            </div>
 		</div>
     </div>
     
