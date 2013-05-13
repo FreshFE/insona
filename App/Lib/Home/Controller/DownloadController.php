@@ -55,6 +55,7 @@ class DownloadController extends Controller
 	{
 		$Pager = new \Think\Library\Pager();
 		$Pager->varPage = $varPage;
+		$Pager->rollPage = 3;
 		return $Pager->output($count, $listRow);
 	}
 
