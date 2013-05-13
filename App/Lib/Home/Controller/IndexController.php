@@ -16,7 +16,7 @@ class IndexController extends Controller
 		$Intro = M('Introduction');
 
 		// 公司简介
-		$intro = $Intro->find(1);
+		$intro = $Intro->find(8);
 		$this->assign('intro', $intro);
 
 		// 产品展示
