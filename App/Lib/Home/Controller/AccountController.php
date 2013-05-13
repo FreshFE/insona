@@ -286,11 +286,11 @@ class AccountController extends Controller
 	    // 配置
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
-	    $phpmailer->Host 		= 'smtp.exmail.qq.com';
+	    $phpmailer->Host 		= 'smtp.insona.cc';
 	    $phpmailer->Port 		= 25;
-	    $phpmailer->Username 	= 'service@meside.com';
-	    $phpmailer->Password 	= 'mesidewin8';
-	    $phpmailer->From 		= 'service@meside.com';
+	    $phpmailer->Username 	= 'service@insona.cc';
+	    $phpmailer->Password 	= 'Control4inSona';
+	    $phpmailer->From 		= 'service@insona.cc';
 	    $phpmailer->FromName 	= 'inSona';
 	    $phpmailer->CharSet 	= "utf-8";
 	    //$phpmailer->AddReplyTo($this->site['smtp_user'],$this->site['sitename']);
