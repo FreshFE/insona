@@ -2,6 +2,7 @@
 
 use Think\Behavior;
 use Think\Cookie;
+use Think\Config;
 
 class CheckLang extends Behavior
 {
@@ -23,7 +24,15 @@ class CheckLang extends Behavior
 			$lang = 'zh-cn';
 		}
 
-		dump($lang);
+		// 更换数据库
+		if($lang == 'zh-cn') {
+			Config::set('DB_NAME', 'insona');
+			Config::set('DEFAULT_LANG', $lang);
+		}
+		else if($lang == 'en-us') {
+			Config::set('DB_NAME', 'insona_eng');
+			Config::set('DEFAULT_LANG', $lang);
+		}
 	}
 
 	public function checkValid($lang)
