@@ -1,8 +1,7 @@
 <?php
 
 return array(
-	'app_auth' => array(
-		// 'Think\\Behaviors\\CheckAuth'
+	'app_lang' => array(
 		'App\\LangBundle\\Behaviors\\CheckLang'
 	)
 );
