@@ -15,13 +15,13 @@
 		<ul>
 			<a href="__GROUP__" class="a"><img src="@/assets/images/logo_002.gif" align="left"/></a>
             {{if $smarty.session.com_auth_key}}
-            <li class="container_ul_li1"><a href="__GROUP__/account/logout" class="all_logon_a2" > 注销 inSona 账号</a> <span class="container_span"> &nbsp;| </span></li>
+            <li class="container_ul_li1"><a href="__GROUP__/account/logout" class="all_logon_a2" > {{L('LOGOUT')}}</a> <span class="container_span"> &nbsp;| </span></li>
             {{else}}
-            <li class="container_ul_li1"><a href="__GROUP__/account/register" class="all_logon_a2" > 注 册</a> <span class="container_span"> &nbsp;| </span></li>
-            <li class="container_ul_li1"><a href="__GROUP__/account/login" class="all_logon_a1">登 陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li class="container_ul_li1"><a href="__GROUP__/account/register" class="all_logon_a2" > {{L('REGISTER')}}</a> <span class="container_span"> &nbsp;| </span></li>
+            <li class="container_ul_li1"><a href="__GROUP__/account/login" class="all_logon_a1">{{L('LOGIN')}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
             {{/if}}
             <li class="container_ul_li1"><a href="?language=zh-cn" class="all_logon_a1">中 文</a> <span class="container_span"> &nbsp;| </span></li>
-           	<li class="container_ul_li1"><a href="?language=en-us" class="all_logon_a1">英 文</a> </li>
+           	<li class="container_ul_li1"><a href="?language=en-us" class="all_logon_a1">English</a> </li>
 		</ul>
     </div>
     
@@ -41,12 +41,12 @@
     <div class="all_header">
     <ul>
     		<li class="container_ul_li"><a href="__GROUP__" class="container_ul_li_a"><img src="@/assets/images/index_001.gif" /></a></li>
-        	<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product" class="container_ul_li_a">产品展示</a></li>
-			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a">产品驱动</a></li>
-			<li class="container_ul_li"><a href="__GROUP__/third"class="container_ul_li_a">三方驱动</a></li>
-			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a">资料下载</a></li>
-			<li class="container_ul_li"><a href="__GROUP__/support"class="container_ul_li_a">反馈与建议</a></li>
-			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">关于我们</a></li>
+        	<li class="container_ul_li">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__GROUP__/product" class="container_ul_li_a">{{L('PRODUCT_SHOW')}}</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/driver" class="container_ul_li_a">{{L('PRODUCT_DRIVER')}}</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/third"class="container_ul_li_a">{{L('THIRD_DRIVER')}}</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/download" class="container_ul_li_a">{{L('INFO_DOWNLOAD')}}</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/support"class="container_ul_li_a">{{L('FEED_SUPPORT')}}</a></li>
+			<li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">{{L('ABOUT_US')}}</a></li>
       </ul>
             <form action="__GROUP__/search" method="get">
                 {{C('TOKEN_ON', false)}}
