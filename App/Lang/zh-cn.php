@@ -8,6 +8,7 @@ return array(
 	'LOGOUT' => '注销 insona 账号',
 
 	// 导航页面
+	'HOME' => '首页',
 	'PRODUCT_SHOW' => '产品展示',
 	'PRODUCT_DRIVER' => '产品驱动',
 	'THIRD_DRIVER' => '三方驱动',
