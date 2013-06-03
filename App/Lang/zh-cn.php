@@ -36,6 +36,38 @@ return array(
 	'SUPPORT_TITLE' => '标题',
 	'SUPOORT_PRODUCT_TYPE' => '产品型号',
 	'SUPPORT_CONTENT' => '内容',
-	'SUPPORT_FONT_NUM' => '个字符内'
+	'SUPPORT_FONT_NUM' => '个字符内',
+
+	// 注册
+	'SURENAME' => '姓名',
+	'PHONE' => '手机',
+	'COMPANY' => '公司名称',
+	'BIRTHDAY' => '生日',
+	'UPLOAD_LICENSE' => '上传营业执照',
+	'IDCARD' => '证件号',
+	'COUNTRY' => '国家',
+	'CHINA' => '中国',
+	'US' => '美国',
+	'UK' => '英国',
+	'EMAIL' => 'E-MAIL',
+	'CITY' => '城市',
+	'PASSWORD' => '密码',
+	'ADDRESS' => '街道地址',
+	'REPASSWORD' => '确认密码',
+	'INSTALL_TYPE' => '安装方式',
+	'HOUSE' => '住宅',
+	'LIGHT_COMMERCIAL' => '轻型商用',
+	'ONDOOR_SERVICE' => '上门服务',
+	'INTERNET_INSTALL' => '网络安装',
+	'SELF_INSTALL' => '自己安装',
+
+	// 登录
+	'FORGET_PASSWORD' => '忘记密码？',
+
+	// 忘记密码
+	'FORGET_PASSWORD_TIP' => '请输入您的注册邮箱，以便找回密码。',
+
+	'PLEASE_NEW_PASSWORD' => '请输入新密码。',
+	'PLEASE_REPASSWORD' => '请再次确认密码。'
 
 );

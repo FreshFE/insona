@@ -37,13 +37,13 @@
         </div>
         <p>
        <div class="register_name">
-        	<p align="right">姓名：</p>
+        	<p align="right">{{L('SURENAME')}}：</p>
         </div>
         <div class="register_text1">
        		<p align="right"><input name="username" type="text" class="register_text" /></p>
         </div>
         <div class="register_name1">
-        	<p align="right">手机：</p>
+        	<p align="right">{{L('PHONE')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="phone" type="text" class="register_text" /></p>
@@ -53,13 +53,13 @@
 
         <p>
        	<div class="register_name">
-        	<p align="right">公司名称：</p>
+        	<p align="right">{{L('COMPANY')}}：</p>
         </div>
         <div class="register_text1">
        		<p align="right"><input name="company" type="text" class="register_text" /></p>
         </div>
         <div class="register_name1">
-        	<p align="right">生日：</p>
+        	<p align="right">{{L('BIRTHDAY')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="birthday" type="text" class="register_text" /></p>
@@ -69,13 +69,13 @@
  
        <p>
        <div class="register_name">
-        	<p align="right">上传营业执照：</p>
+        	<p align="right">{{L('UPLOAD_LICENSE')}}：</p>
         </div>
         <div class="register_text1">
           <p align="right"><input name="license_upload" type="file" class="register_text no-input" id="J_license_upload" /></p>
         </div>
         <div class="register_name1">
-        	<p align="right">证件号：</p>
+        	<p align="right">{{L('IDCARD')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="idcard" type="text" class="register_text" /></p>
@@ -85,19 +85,19 @@
         
        	<p>
        	<div class="register_name">
-        	<p align="right">国家：</p>
+        	<p align="right">{{L('COUNTRY')}}：</p>
         </div>
         <div class="register_text1">
        		<p align="left">
             <select name="country" class="register_seltxt">
-      				<option value="china" selected="selected">中国
-      				<option value="us">美国
-      				<option value="uk">英国
+      				<option value="china" selected="selected">{{L('CHINA')}}
+      				<option value="us">{{L('US')}}
+      				<option value="uk">{{L('UK')}}
 				    </select>
         </p>
         </div>
         <div class="register_name1">
-        	<p align="right">E-MAIL：</p>
+        	<p align="right">{{L('EMAIL')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="email" type="text" class="register_text" /></p>
@@ -107,13 +107,13 @@
         
         <p>
        	<div class="register_name">
-        	<p align="right">城市：</p>
+        	<p align="right">{{L('CITY')}}：</p>
         </div>
         <div class="register_text1">
             <p align="left"><input name="city" type="text" class="register_text" /></p>
         </div>
         <div class="register_name1">
-        	<p align="right">密码：</p>
+        	<p align="right">{{L('PASSWORD')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="password" type="password" class="register_text" /></p>
@@ -123,13 +123,13 @@
         
         <p>
        <div class="register_name">
-        	<p align="right">街道地址：</p>
+        	<p align="right">{{L('ADDRESS')}}：</p>
         </div>
         <div class="register_text1">
        		<p align="right"><input name="address" type="text" class="register_text" /></p>
         </div>
         <div class="register_name1">
-        	<p align="right">确认密码：</p>
+        	<p align="right">{{L('REPASSWORD')}}：</p>
         </div>
         <div class="register_text2">
        		<p align="right"><input name="repassword" type="password" class="register_text" /></p>
@@ -139,14 +139,14 @@
         
        <p>
        <div class="register_name2">
-        	<p align="right"> 安装方式：</p>
+        	<p align="right"> {{L('INSTALL_TYPE')}}：</p>
         </div>
         <div class="register_text3">
        		<p align="left">
   					<input type="radio" name="install_type" value="住宅" class="radio" />
-					住宅&nbsp;&nbsp;&nbsp;&nbsp;	
+					{{L('HOUSE')}}&nbsp;&nbsp;&nbsp;&nbsp;	
  					<input type="radio" name="install_type" value="轻型商用" class="radio" />
-					轻型商用
+					{{L('LIGHT_COMMERCIAL')}}
                 <img src="@/assets/images/register_004.gif"  class="register_lable_img"/>
             </p>
         </div>
@@ -163,9 +163,9 @@
         <div class="register_text2">
        		<p align="left">
                 <select name="install_way" class="register_seltxt">
-    				<option value="上门服务" selected="selected">上门服务
-    				<option value="网络安装">网络安装
-    				<option value="自己安装">自己安装
+    				<option value="上门服务" selected="selected">{{L('ONDOOR_SERVICE')}}
+    				<option value="网络安装">{{L('INTERNET_INSTALL')}}
+    				<option value="自己安装">{{L('SELF_INSTALL')}}
 				</select>
             </p>
         </div>
