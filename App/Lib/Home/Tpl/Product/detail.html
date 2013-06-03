@@ -42,12 +42,12 @@
 
                 {{if $member}}
                 <p class="show2_morey"><span class="show2_RMB">RMB</span> {{$data.price}}</p>
-                <a href="{{$data.link}}" class="show2_a" target="_blank"> 点击即可购买!</a>
+                <a href="{{$data.link}}" class="show2_a" target="_blank"> {{L('PRODUCT_TOBUY')}}!</a>
                 {{else}}
-                <p class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">您已注册，但您的账号还未激活</p>
+                <p class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">{{L('PRODUCT_TO_VALID_ACCOUNT')}}</p>
                 {{/if}}
             {{else}}
-                <a href="__GROUP__/account/register" class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">登录后即可查看产品的价格和购买链接</a>
+                <a href="__GROUP__/account/register" class="show2_morey" style="font-size: 12px; font-family: '微软雅黑'">{{L('PRODUCT_TO_LOGIN')}}</a>
             {{/if}}
         </div>
         <div style="clear: both;"></div>

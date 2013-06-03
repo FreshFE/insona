@@ -40,7 +40,7 @@
     <div class="down_line"></div>
     <div class="container">
   		<div class="down1">
-            <p class="down_p">&nbsp;非会员区</p>
+            <p class="down_p">&nbsp;{{L('DOWNLOAD_ROLE_PUBLIC')}}</p>
  			<ul>
                 {{foreach $novips as $data}}
         		<li><a href="{{$data.link}}"><img src="{{Helper::img($data['coverpath'], '290x156')}}" alt="{{$data.title}}"/>{{$data.title}}</a></li>
@@ -62,14 +62,14 @@
                 {{/if}}
                 &nbsp;&nbsp;
                 <form action="__SELF__" method="get" style="display: inline;">
-                  跳转至&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
+                  {{L('DONWLOAD_JUMPTO')}}&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
                 </form>
               {{/if}}
             </div>
 
         	<img src="@/assets/images/down_009.gif" width="952" />
 
-  			<p class="down_p">&nbsp;会员区</p>
+  			<p class="down_p">&nbsp;{{L('DOWNLOAD_ROLE_MEMBER')}}</p>
       		<ul>
                 {{foreach $vips as $data}}
                   {{if $user_id}}
@@ -98,7 +98,7 @@
                 {{/if}}
                 &nbsp;&nbsp;
                 <form action="__SELF__" method="get" style="display: inline;">
-                  跳转至&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
+                  {{L('DONWLOAD_JUMPTO')}}&nbsp;<input name="novip" type="text"class="page_text" style="width: 50px;" />
                 </form>
                 {{/if}}
             </div>
