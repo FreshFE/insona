@@ -176,6 +176,9 @@ a img {
 	font-size: 12px;
 	color: #777777;
 }
+input.search_text:-ms-clear {
+	display: none;
+}
 .search_btn {
 	float: left;
 	height: 44px;
