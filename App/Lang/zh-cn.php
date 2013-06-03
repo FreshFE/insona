@@ -7,6 +7,8 @@ return array(
 	'LOGIN' => '登录',
 	'LOGOUT' => '注销 insona 账号',
 
+	'LANGUAGE_ADMIN' => '中文后台',
+
 	// 导航页面
 	'HOME' => '首页',
 	'PRODUCT_SHOW' => '产品展示',

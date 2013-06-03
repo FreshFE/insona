@@ -7,6 +7,8 @@ return array(
 	'LOGIN' => 'login',
 	'LOGOUT' => 'logout',
 
+	'LANGUAGE_ADMIN' => 'English Admin',
+
 	// 导航页面
 	'HOME' => 'Home',
 	'PRODUCT_SHOW' => 'Product',
