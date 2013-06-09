@@ -1113,8 +1113,8 @@ input[type='password'].register_text {
 	background: url(../images/register_004.gif) no-repeat center right;
 }
 .register_seltxt {
-	/*height: 28px;*/
-	/*width: 222px;*/
+	height: 28px;
+	width: 200px;
 	/*border: none;*/
 	/*position: absolute;*/
 	font-family: "微软雅黑";
