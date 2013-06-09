@@ -1201,7 +1201,8 @@ input[type='password'].register_text {
 	font-size: 12px;
 	line-height: 23.05px;
 	color: #777777;
-	margin-left: 200px;
+	margin-left: 60px;
+	/*text-align: center;*/
 }
 .propose_us_body {
 	float:left;
@@ -1247,7 +1248,7 @@ input[type='password'].register_text {
 	padding-top: 0px;
 	margin-top: 0px;
 	text-decoration: none;
-	margin-left: 310px;
+	margin-left: 298px;
 	background-image: url(../images/fpwd_001.gif);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1256,7 +1257,7 @@ input[type='password'].register_text {
 .propose_content{
 	float:left;
 	width:100%;
-	padding-left:244px;
+	padding-left:200px;
 	padding-top:10px;
 }
 .propose_content .control-group {
