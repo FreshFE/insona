@@ -1106,7 +1106,6 @@ input[type='password'].register_text {
 }
 .register_file {
 	float: left;
-	width: 60px;
 }
 .register_text.no-input {
 	width: 250px;
