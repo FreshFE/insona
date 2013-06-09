@@ -135,7 +135,7 @@ a img {
 .radio {
 	height: 15px;
 	width: 15px;
-	margin-top: 12px;
+	margin-top: 8px;
 	background-image: url(../images/register_003.gif);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1116,7 +1116,7 @@ input[type='password'].register_text {
 	height: 28px;
 	width: 222px;
 	border: none;
-	position: absolute;
+	/*position: absolute;*/
 	font-family: "微软雅黑";
 	font-size: 12px;
 	line-height: 23px;
@@ -1160,9 +1160,9 @@ input[type='password'].register_text {
 
 }
 .register_text1{
-	float:left;
-	width:245px;
-	padding-bottom:21px;
+	float: left;
+	width: 245px;
+	margin-bottom: 21px;
 }
 .register_text3{
 	float:left;
@@ -1172,7 +1172,7 @@ input[type='password'].register_text {
 }
 .register_text4{
 	float:left;
-	padding-bottom:90px;
+	margin-bottom: 90px;
 }
 .register_text2{
 	float:left;
@@ -1181,13 +1181,13 @@ input[type='password'].register_text {
 	padding-bottom:21px;
 }
 .register_text1.input-require {
-	background: url(../images/register_004.gif) no-repeat 230px;
+	background: url(../images/register_004.gif) no-repeat 230px 0;
 }
 .register_text2.input-require {
-	background: url(../images/register_004.gif) no-repeat 230px;
+	background: url(../images/register_004.gif) no-repeat 230px 0;
 }
 .register_text3.input-require {
-	background: url(../images/register_004.gif) no-repeat 221px;
+	background: url(../images/register_004.gif) no-repeat 221px 0;
 }
 .register_p{
 	font-family: "微软雅黑";
