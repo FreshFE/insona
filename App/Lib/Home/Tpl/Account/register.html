@@ -87,12 +87,12 @@
        	<div class="register_name">
         	<p align="right">{{L('COUNTRY')}}：</p>
         </div>
-        <div class="register_text1">
+        <div class="register_text1 input-require">
        		<p align="left">
             <select name="country" class="register_seltxt">
-      				<option value="china" selected="selected">{{L('CHINA')}}
-      				<option value="us">{{L('US')}}
-      				<option value="uk">{{L('UK')}}
+              <option value="china">{{L('CHINA')}}</option>
+      				<option value="us">{{L('US')}}</option>
+      				<option value="uk">{{L('UK')}}</option>
 				    </select>
         </p>
         </div>
@@ -141,13 +141,13 @@
        <div class="register_name2">
         	<p align="right"> {{L('INSTALL_TYPE')}}：</p>
         </div>
-        <div class="register_text3">
+        <div class="register_text3 input-require">
        		<p align="left">
   					<input type="radio" name="install_type" value="住宅" class="radio" />
 					{{L('HOUSE')}}&nbsp;&nbsp;&nbsp;&nbsp;	
  					<input type="radio" name="install_type" value="轻型商用" class="radio" />
 					{{L('LIGHT_COMMERCIAL')}}
-                <img src="@/assets/images/register_004.gif"  class="register_lable_img"/>
+                <!-- <img src="@/assets/images/register_004.gif"  class="register_lable_img"/> -->
             </p>
         </div>
         
@@ -160,13 +160,13 @@
         <p>
        	<div class="register_name3">
         </div>
-        <div class="register_text2">
+        <div class="register_text2 input-require">
        		<p align="left">
-                <select name="install_way" class="register_seltxt">
-    				<option value="上门服务" selected="selected">{{L('ONDOOR_SERVICE')}}
-    				<option value="网络安装">{{L('INTERNET_INSTALL')}}
-    				<option value="自己安装">{{L('SELF_INSTALL')}}
-				</select>
+              <select name="install_way" class="register_seltxt">
+          				<option value="上门服务" selected="selected">{{L('ONDOOR_SERVICE')}}</option>
+          				<option value="网络安装">{{L('INTERNET_INSTALL')}}</option>
+          				<option value="自己安装">{{L('SELF_INSTALL')}}</option>
+      				</select>
             </p>
         </div>
         </form>

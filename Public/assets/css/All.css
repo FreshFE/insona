@@ -1090,7 +1090,8 @@ input.search_text:-ms-clear {
 	padding-left:360px;
 	border:0;
 }
-.register_text{
+input[type='text'].register_text,
+input[type='password'].register_text {
 	padding-left:6px;
 	height: 25px;
 	width: 240px;
@@ -1103,25 +1104,19 @@ input.search_text:-ms-clear {
 	line-height:25px;
 }
 .register_text.no-input {
-	background-image: url(../images/register_004.gif);
-	background-position: right;
+	width: 250px;
+	background: url(../images/register_004.gif) no-repeat center right;
 }
 .register_seltxt {
 	height: 28px;
-	width: 243px;
-	background-image: url(../images/register_002.gif);
-	background-repeat: no-repeat;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-	position:absolute;
+	width: 222px;
+	border: none;
+	position: absolute;
 	font-family: "微软雅黑";
 	font-size: 12px;
 	line-height: 23px;
 	color: #777777;
 	padding-left:5px;
-	margin-left:3px;
 	padding-right:20px;
 	padding-top:5px;
 	padding-bottom:5px;
@@ -1179,6 +1174,15 @@ input.search_text:-ms-clear {
 	width:235px;
 	padding-right:152px;
 	padding-bottom:21px;
+}
+.register_text1.input-require {
+	background: url(../images/register_004.gif) no-repeat 230px;
+}
+.register_text2.input-require {
+	background: url(../images/register_004.gif) no-repeat 230px;
+}
+.register_text3.input-require {
+	background: url(../images/register_004.gif) no-repeat 221px;
 }
 .register_p{
 	font-family: "微软雅黑";
