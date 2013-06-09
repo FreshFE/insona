@@ -1170,8 +1170,8 @@ input[type='password'].register_text {
 .register_text3{
 	float:left;
 	width:399px;
-	padding-bottom:15px;
-	margin-left:10px;
+	padding-top: 4px;
+	margin-bottom: 15px;
 }
 .register_text4{
 	float:left;
