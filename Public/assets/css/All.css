@@ -5,6 +5,7 @@ body {
 	font-size: 12px;
 	color: #777777;
 	padding: 0px;
+	overflow-x: hidden;
 }
 ul { list-style:none;}
 ul,h1,form,p {
@@ -1257,6 +1258,25 @@ input[type='password'].register_text {
 	width:100%;
 	padding-left:244px;
 	padding-top:10px;
+}
+.propose_content .control-group {
+
+}
+.propose_content .control-label {
+	display: block;
+	float: left;
+	width: 90px;
+	text-align: right;
+}
+.propose_content .controls {
+	margin-left: 100px;
+}
+.propose_content .clearfix {
+	clear: both;
+}
+.propose_content .seltxt {
+	display: block;
+	margin: 0;
 }
 .propose_text {
 	border:1px none #CCCCCC;

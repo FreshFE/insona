@@ -38,24 +38,34 @@
       <form action="__SELF__" method="post">
     	<div class="propose_content">
 
-       		<p class="p" align="left">
-            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{L('SUPPORT_TITLE')}}：&nbsp;&nbsp;
-            	<input name="title" type="text" class="propose_text" id="J_input" maxlength="24" />&nbsp;&nbsp;<span id="J_input_num">24</span>{{L('SUPPORT_FONT_NUM')}}
-				<br /><span class="propose_span">{{L('SUPOORT_PRODUCT_TYPE')}}：</span>
-					<select name="product" class="seltxt">
-            {{foreach $datas as $data}}
-					   <option value="{{$data.title}}">{{$data.title}}</option>
-             {{/foreach}}
-					</select>
-           		 </p><br />
-            
-            
-			<div class="propose_div">
-            	<p class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{L('SUPPORT_CONTENT')}}：&nbsp;&nbsp;</p>
+            <div class="control-group">
+                <label class="control-label">{{L('SUPPORT_TITLE')}}：</label>
+                <div class="controls">
+                    <input name="title" type="text" class="propose_text" id="J_input" maxlength="24" style="margin-right: 10px;" />
+                    <span id="J_input_num">24</span>{{L('SUPPORT_FONT_NUM')}}
+                </div>
+                <div class="clearfix"></div>
             </div>
-            	<textarea name="content" cols="" rows="1" class="propose_text1" style="overflow-y:hidden" id="J_textarea" maxlength="200"></textarea>
-            <div class="propose_div1">			
-            	&nbsp;&nbsp;<span id="J_textarea_num">200</span>{{L('SUPPORT_FONT_NUM')}}
+
+            <div class="control-group" style="margin-bottom: 12px;">
+                <label class="control-label">{{L('SUPOORT_PRODUCT_TYPE')}}：</label>
+                <div class="controls" style="height: 30px;">
+                    <select name="product" class="seltxt">
+                        {{foreach $datas as $data}}
+                        <option value="{{$data.title}}">{{$data.title}}</option>
+                        {{/foreach}}
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">{{L('SUPPORT_CONTENT')}}：</label>
+                <div class="controls">
+                    <textarea name="content" cols="" rows="1" class="propose_text1" style="overflow-y:hidden; margin-right: 10px; resize: none;" id="J_textarea" maxlength="200"></textarea>
+                    <span id="J_textarea_num">200</span>{{L('SUPPORT_FONT_NUM')}}
+                </div>
+                <div class="clearfix"></div>
             </div>
     	</div>
         <input type="submit" class="propose_btn" value=""/>
