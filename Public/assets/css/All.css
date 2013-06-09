@@ -1104,6 +1104,10 @@ input[type='password'].register_text {
 	color: #777777;
 	line-height:25px;
 }
+.register_file {
+	float: left;
+	width: 60px;
+}
 .register_text.no-input {
 	width: 250px;
 	background: url(../images/register_004.gif) no-repeat center right;
