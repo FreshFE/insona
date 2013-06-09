@@ -1105,7 +1105,9 @@ input[type='password'].register_text {
 	line-height:25px;
 }
 .register_file {
-	width: 220px;
+	width: 224px;
+	height: 28px;
+	/*border: solid 1px #e3e3e3;*/
 	float: left;
 }
 .register_text.no-input {
@@ -1114,8 +1116,9 @@ input[type='password'].register_text {
 }
 .register_seltxt {
 	height: 28px;
-	width: 200px;
-	/*border: none;*/
+	width: 224px;
+	border: none;
+	border: solid 1px #e3e3e3;
 	/*position: absolute;*/
 	font-family: "微软雅黑";
 	font-size: 12px;
