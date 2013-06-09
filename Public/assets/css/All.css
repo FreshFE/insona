@@ -1170,7 +1170,7 @@ input[type='password'].register_text {
 .register_text3{
 	float:left;
 	width:399px;
-	padding-top: 4px;
+	height: 30px;
 	margin-bottom: 15px;
 }
 .register_text4{
@@ -1190,7 +1190,7 @@ input[type='password'].register_text {
 	background: url(../images/register_004.gif) no-repeat 230px 0;
 }
 .register_text3.input-require {
-	background: url(../images/register_004.gif) no-repeat 221px 0;
+	background: url(../images/register_004.gif) no-repeat 230px 0;
 }
 .register_p{
 	font-family: "微软雅黑";
