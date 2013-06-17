@@ -42,7 +42,7 @@
         <div class="three_sony3">
             <img src="{{Helper::img($data['coverpath'], '208x193')}}" align="left" class="three_sony_img" /><br />
             <span class="three_span">{{$data.title}}</span>
-            <p class="three_p">{{$data.content}}</p>
+            <p class="three_p">{{strip_tags($data['content'])}}</p>
             <p class="three_sony_p">&nbsp;</p>
             
             <div class="three_sony_div">
@@ -61,7 +61,7 @@
         <div class="three_sony4">
             <img src="{{Helper::img($data['coverpath'], '208x193')}}" align="left" class="three_sony_img"><br>
             <span class="three_span">{{$data.title}}</span>
-            <p class="three_p">{{$data.content}}</p>
+            <p class="three_p">{{strip_tags($data['content'])}}</p>
             <p class="three_sony_p">&nbsp;</p>
             <div class="three_sony_div">
                 <img src="@/assets/images/three_inside_002.gif" width="26" height="19">
