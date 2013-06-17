@@ -245,7 +245,7 @@ input.search_text:-ms-clear {
 .index_trends {
 	float: left;
 	width: 360px;
-	padding-bottom:45px;
+	padding-bottom: 100px;
 	padding-top: 52px;
 	padding-left: 191px;
 	background-image: url(../images/index_004.jpg);
