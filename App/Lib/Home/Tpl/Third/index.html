@@ -41,7 +41,9 @@
         
         <div class="three_body">
         	<p><span class="three_span1">{{$data.title}}</span></p>
-			<p class="three_p">{{$data.content}}</p>
+			<p class="three_p">
+                {{Helper::mssubstr(strip_tags($data['content']), 80, true)}}
+            </p>
     	</div>
         
         <div class="three_xian">
