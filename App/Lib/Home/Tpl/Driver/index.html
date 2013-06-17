@@ -42,7 +42,9 @@
         
         <div class="drive_body">
         	<p><span class="three_span1">{{$data.title}}</span></p>
-			<p class="driver_p">{{$data.content}}</p>
+			<p class="driver_p">
+                {{Helper::mssubstr(strip_tags($data['content']), 80, true)}}
+            </p>
             <p class="p_call">&nbsp;</p>
             <div class="three_sony_div">
  				<img src="@/assets/images/three_inside_002.gif" width="26" height="19"/>
