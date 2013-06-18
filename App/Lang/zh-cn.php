@@ -70,6 +70,11 @@ return array(
 	'FORGET_PASSWORD_TIP' => '请输入您的注册邮箱，以便找回密码。',
 
 	'PLEASE_NEW_PASSWORD' => '请输入新密码。',
-	'PLEASE_REPASSWORD' => '请再次确认密码。'
+	'PLEASE_REPASSWORD' => '请再次确认密码。',
+
+	// 后台
+	'ACCOUNT_LOGIN' => '账号登录',
+	'USERNAME' => '用户名',
+	'SIGN_IN' => '登录'
 
 );

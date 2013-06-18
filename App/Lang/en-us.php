@@ -70,5 +70,10 @@ return array(
 	'FORGET_PASSWORD_TIP' => 'Type your registerd E-mail to find your password',
 
 	'PLEASE_NEW_PASSWORD' => 'Please type new password',
-	'PLEASE_REPASSWORD' => 'Please confirm your password'
+	'PLEASE_REPASSWORD' => 'Please confirm your password',
+
+	// 后台
+	'ACCOUNT_LOGIN' => 'Account Login',
+	'USERNAME' => 'Username',
+	'SIGN_IN' => 'Sign in'
 );
