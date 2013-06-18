@@ -275,9 +275,9 @@ input.search_text:-ms-clear {
 	color: #777777;
 }
 .index_text {
-	float: left;
+	float: right;
 	margin-top: 14px;
-	margin-left: 230px;
+	/*margin-left: 230px;*/
 	height: 25px;
 	background-image: url(../images/search.gif);
 	border: 1px none #FFF;
