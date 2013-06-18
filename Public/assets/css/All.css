@@ -1331,3 +1331,12 @@ input[type='password'].register_text {
 	width: 35px;
 	border: solid 1px #bbb;
 }
+.index_intro_content {
+	line-height: 22px;
+	color: #777;
+}
+.index_intro_content p {
+	line-height: 22px;
+	color: #777;
+	font-size: 12px;
+}
