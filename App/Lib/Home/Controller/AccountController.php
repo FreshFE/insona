@@ -291,8 +291,8 @@ class AccountController extends Controller
 	    // 配置
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
-	    $phpmailer->Host 		= 'pop3.insona.cc';
-	    $phpmailer->Port 		= 110;
+	    $phpmailer->Host 		= 'smtp.insona.cc';
+	    $phpmailer->Port 		= 25;
 	    $phpmailer->Username 	= 'service@insona.cc';
 	    $phpmailer->Password 	= 'Control4inSona';
 	    $phpmailer->From 		= 'service@insona.cc';
