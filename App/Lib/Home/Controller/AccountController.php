@@ -144,6 +144,10 @@ class AccountController extends Controller
 
 			$forget = M('Forget')->find($id);
 
+			dump($_POST);
+			dump($forget);
+			exit();
+
 			// 检查是否存在 HTTP_ORIGIN
 			// if(!$_SERVER['HTTP_ORIGIN']) {
 			// 	$http_host = 'http://insona.cc/';
