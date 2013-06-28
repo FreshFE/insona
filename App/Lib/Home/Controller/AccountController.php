@@ -145,9 +145,14 @@ class AccountController extends Controller
 			$forget = M('Forget')->find($id);
 
 			// 检查是否存在 HTTP_ORIGIN
-			if(!$_SERVER['HTTP_ORIGIN']) {
-				$http_host = 'http://insona.cc/';
-			}
+			// if(!$_SERVER['HTTP_ORIGIN']) {
+			// 	$http_host = 'http://insona.cc/';
+			// }
+			// else {
+			// 	$http_host = $_SERVER['HTTP_ORIGIN'];
+			// }
+
+			$http_host = 'http://insona.cc/';
 
 			// $link
 			$link = $http_host . __URL__ . '/findpassword?code=' . $forget['code'];
