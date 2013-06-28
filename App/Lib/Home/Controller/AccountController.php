@@ -140,6 +140,10 @@ class AccountController extends Controller
 					'email' => $_POST['email'],
 					'createline' => time()
 				));
+
+				dump('测试id');
+				dump($id);
+				exit();
 			}
 
 			$forget = M('Forget')->find($id);
