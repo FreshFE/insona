@@ -157,7 +157,7 @@ class AccountController extends Controller
 			// 	$http_host = $_SERVER['HTTP_ORIGIN'];
 			// }
 
-			$http_host = 'http://insona.cc/';
+			$http_host = 'http://insona.cc';
 
 			// $link
 			$link = $http_host . __URL__ . '/findpassword?code=' . $forget['code'];
@@ -302,14 +302,10 @@ class AccountController extends Controller
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
 	    $phpmailer->Host 		= 'smtp.insona.cc';
-	    // $phpmailer->Host 		= 'smtp.exmail.qq.com';
 	    $phpmailer->Port 		= 25;
 	    $phpmailer->Username 	= 'service@insona.cc';
 	    $phpmailer->Password 	= 'Control4inSona';
-	    // $phpmailer->Username 	= 'service@meside.com';
-	    // $phpmailer->Password 	= 'mesidewin8';
 	    $phpmailer->From 		= 'service@insona.cc';
-	    // $phpmailer->From 		= 'service@meside.com';
 	    $phpmailer->FromName 	= 'inSona';
 	    $phpmailer->CharSet 	= "utf-8";
 	    // $phpmailer->SMTPDebug 	= true;
@@ -328,18 +324,11 @@ class AccountController extends Controller
 	    $phpmailer->MsgHTML($send);
 	    $phpmailer->IsHTML(true);
 
-	    $result = $phpmailer->Send();
+	    $isSend = $phpmailer->Send();
 
 	    // 发送
-	    if(!$result) {
-	    	dump($phpmailer);
-	    	dump(array('错误' => $phpmailer->ErrorInfo));
-	    	exit();
-	    }
-	    else {
-	    	dump('正确');
-	    	dump($phpmailer);
-	    	exit();
+	    if(!$isSend) {
+	    	Redirect::error('邮件发送错误，请重试');
 	    }
 	}
 }
