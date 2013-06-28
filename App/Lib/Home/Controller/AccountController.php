@@ -145,17 +145,9 @@ class AccountController extends Controller
 					'email' => $_POST['email'],
 					'createline' => time()
 				));
-
-				dump('测试id');
-				dump($id);
-				exit();
 			}
 
 			$forget = M('Forget')->find($id);
-
-			dump($_POST);
-			dump($forget);
-			exit();
 
 			// 检查是否存在 HTTP_ORIGIN
 			// if(!$_SERVER['HTTP_ORIGIN']) {
@@ -309,7 +301,7 @@ class AccountController extends Controller
 	    // 配置
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
-	    $mail->SMTPSecure		= "tls";
+	    // $mail->SMTPSecure		= "tls";
 	    // $phpmailer->Host 		= 'smtp.insona.cc';
 	    $phpmailer->Host 		= 'smtp.exmail.qq.com';
 	    $phpmailer->Port 		= 25;
@@ -346,6 +338,7 @@ class AccountController extends Controller
 	    	exit();
 	    }
 	    else {
+	    	dump('正确');
 	    	dump($phpmailer);
 	    	exit();
 	    }
