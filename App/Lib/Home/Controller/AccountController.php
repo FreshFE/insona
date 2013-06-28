@@ -303,6 +303,7 @@ class AccountController extends Controller
 	    $phpmailer->From 		= 'service@insona.cc';
 	    $phpmailer->FromName 	= 'inSona';
 	    $phpmailer->CharSet 	= "utf-8";
+	    $PhpMailer->SMTPDebug 	= true;
 	    //$phpmailer->AddReplyTo($this->site['smtp_user'],$this->site['sitename']);
 
 	    // 遍历发件人
