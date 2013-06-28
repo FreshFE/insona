@@ -296,6 +296,7 @@ class AccountController extends Controller
 	    // 配置
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
+	    $mail->SMTPSecure		= "tls";
 	    // $phpmailer->Host 		= 'smtp.insona.cc';
 	    $phpmailer->Host 		= 'smtp.exmail.qq.com';
 	    $phpmailer->Port 		= 25;
