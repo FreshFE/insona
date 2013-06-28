@@ -31,6 +31,9 @@ return array(
 		'470x350' => array(470, 350, 'both'),
 		'475x386' => array(475, 386, 'both'),
 		'680width' => array(680, 680, 'width'),
+		
+		// product logo
+		'121x38' => array(121, 38, 'both'),
 
 		// Driver
 		'150x170' => array(150, 170, 'both'),
