@@ -301,19 +301,18 @@ class AccountController extends Controller
 	    // 配置
 	    $phpmailer->IsSMTP();
 	    $phpmailer->SMTPAuth 	= true;
-	    // $mail->SMTPSecure		= "tls";
-	    // $phpmailer->Host 		= 'smtp.insona.cc';
-	    $phpmailer->Host 		= 'smtp.exmail.qq.com';
+	    $phpmailer->Host 		= 'smtp.insona.cc';
+	    // $phpmailer->Host 		= 'smtp.exmail.qq.com';
 	    $phpmailer->Port 		= 25;
-	    // $phpmailer->Username 	= 'service@insona.cc';
-	    // $phpmailer->Password 	= 'Control4inSona';
-	    $phpmailer->Username 	= 'service@meside.com';
-	    $phpmailer->Password 	= 'mesidewin8';
-	    // $phpmailer->From 		= 'service@insona.cc';
-	    $phpmailer->From 		= 'service@meside.com';
+	    $phpmailer->Username 	= 'service@insona.cc';
+	    $phpmailer->Password 	= 'Control4inSona';
+	    // $phpmailer->Username 	= 'service@meside.com';
+	    // $phpmailer->Password 	= 'mesidewin8';
+	    $phpmailer->From 		= 'service@insona.cc';
+	    // $phpmailer->From 		= 'service@meside.com';
 	    $phpmailer->FromName 	= 'inSona';
 	    $phpmailer->CharSet 	= "utf-8";
-	    $phpmailer->SMTPDebug 	= true;
+	    // $phpmailer->SMTPDebug 	= true;
 	    //$phpmailer->AddReplyTo($this->site['smtp_user'],$this->site['sitename']);
 
 	    // 遍历发件人
