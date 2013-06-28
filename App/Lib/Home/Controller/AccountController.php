@@ -136,11 +136,8 @@ class AccountController extends Controller
 
 			if($forget)
 			{
-				$id = M('Forget')->where(array('id' => $forget['id']))->save(array('createline' => time()));
-
-				dump('测试存在');
-				dump($forget['id']);
-				exit();
+				M('Forget')->where(array('id' => $forget['id']))->save(array('createline' => time()));
+				$id = $forget['id'];
 			}
 			else {
 				$id = M('Forget')->add(array(
