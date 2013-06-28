@@ -139,7 +139,7 @@ class AccountController extends Controller
 				$id = M('Forget')->where(array('id' => $forget['id']))->save(array('createline' => time()));
 
 				dump('测试存在');
-				dump($id);
+				dump($forget['id']);
 				exit();
 			}
 			else {
