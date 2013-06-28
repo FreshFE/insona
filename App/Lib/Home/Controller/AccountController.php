@@ -122,6 +122,8 @@ class AccountController extends Controller
 
 	public function post_forget()
 	{
+		$_POST['email'] = trim($_POST['email']);
+
 		// 查找是否存在该用户
 		$data = M('CompanyMember')->where(array('email' => $_POST['email']))->find();
 
