@@ -323,11 +323,13 @@ class AccountController extends Controller
 
 	    // 发送
 	    if(!$result) {
-	    	exit($phpmailer->ErrorInfo);
+	    	dump($phpmailer);
+	    	dump(array('错误' => $phpmailer->ErrorInfo));
+	    	exit();
 	    }
 	    else {
-	    	var_dump($phpmailer);
-	    	exit($result);
+	    	dump($phpmailer);
+	    	exit();
 	    }
 	}
 }
