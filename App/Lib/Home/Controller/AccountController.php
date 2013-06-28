@@ -314,6 +314,8 @@ class AccountController extends Controller
 	    $phpmailer->IsHTML(true);
 
 	    // 发送
-	    $phpmailer->Send();
+	    if(!$phpmailer->Send()) {
+	    	exit($phpmailer->ErrorInfo);
+	    }
 	}
 }
