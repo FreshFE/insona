@@ -130,9 +130,15 @@ class AccountController extends Controller
 			// 存在的话，检查code是否存在近期的
 			$forget = M('Forget')->where(array('email' => $_POST['email']))->find();
 
+
+
 			if($forget)
 			{
 				$id = M('Forget')->where(array('id' => $forget['id']))->save(array('createline' => time()));
+
+				dump('测试存在');
+				dump($id);
+				exit();
 			}
 			else {
 				$id = M('Forget')->add(array(
