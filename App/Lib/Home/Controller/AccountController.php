@@ -303,7 +303,7 @@ class AccountController extends Controller
 	    $phpmailer->From 		= 'service@insona.cc';
 	    $phpmailer->FromName 	= 'inSona';
 	    $phpmailer->CharSet 	= "utf-8";
-	    $PhpMailer->SMTPDebug 	= true;
+	    $phpmailer->SMTPDebug 	= true;
 	    //$phpmailer->AddReplyTo($this->site['smtp_user'],$this->site['sitename']);
 
 	    // 遍历发件人
@@ -319,9 +319,15 @@ class AccountController extends Controller
 	    $phpmailer->MsgHTML($send);
 	    $phpmailer->IsHTML(true);
 
+	    $result = $phpmailer->Send();
+
 	    // 发送
-	    if(!$phpmailer->Send()) {
+	    if(!$result) {
 	    	exit($phpmailer->ErrorInfo);
+	    }
+	    else {
+	    	var_dump($phpmailer);
+	    	exit($result);
 	    }
 	}
 }
