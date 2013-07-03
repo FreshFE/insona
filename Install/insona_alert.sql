@@ -4,6 +4,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 ALTER TABLE `insona`.`product` ADD COLUMN `cover_small` CHAR(26) NOT NULL  AFTER `cover_requirement` ;
 
+ALTER TABLE `insona_eng`.`product` ADD COLUMN `cover_small` CHAR(26) NOT NULL  AFTER `cover_requirement` ;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
