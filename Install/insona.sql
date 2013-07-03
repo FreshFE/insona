@@ -88,6 +88,7 @@ CREATE  TABLE IF NOT EXISTS `insona`.`product_category` (
   `createline` INT UNSIGNED NOT NULL ,
   `updateline` INT UNSIGNED NOT NULL ,
   `coverpath` CHAR(26) NOT NULL ,
+  `cover_logo` CHAR(26) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_product_driver_cid_idx` (`cid` ASC) ,
   CONSTRAINT `fk_product_driver_cid`
@@ -136,6 +137,7 @@ CREATE  TABLE IF NOT EXISTS `insona`.`product` (
   `coverpath` CHAR(26) NOT NULL ,
   `driver_id` INT UNSIGNED NOT NULL ,
   `cover_requirement` CHAR(26) NOT NULL ,
+  `cover_small` CHAR(26) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_product_view_product_driver_id_idx` (`product_driver_id` ASC) ,
   CONSTRAINT `fk_product_view_product_driver_id`
@@ -201,6 +203,7 @@ CREATE  TABLE IF NOT EXISTS `insona`.`third_category` (
   `createline` INT UNSIGNED NOT NULL ,
   `updateline` INT UNSIGNED NOT NULL ,
   `coverpath` CHAR(26) NOT NULL ,
+  `cover_logo` CHAR(26) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_third_category_cid_idx` (`cid` ASC) ,
   CONSTRAINT `fk_third_category_cid`
