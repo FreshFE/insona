@@ -10,7 +10,7 @@ class ProductviewController extends Controller
 
 	protected $image_thumb_name = 'thumb';
 
-	protected $cover_thumb_name = '215x100,475x386';
+	protected $cover_thumb_name = '475x386';
 
 	protected $category_model = 'ProductDriver';
 
@@ -27,6 +27,18 @@ class ProductviewController extends Controller
 
 		// 建立数据表
 		$this->model->where(array('id' => $_POST['id']))->save(array('cover_requirement' => $info['name']));
+
+		// 输出JSON
+		Response::json($info);
+	}
+
+	public function coversmall()
+	{
+		// 上传图片
+		$info = Upload::image($_FILES['uploadify_file'], '215x100');
+
+		// 建立数据表
+		$this->model->where(array('id' => $_POST['id']))->save(array('cover_small' => $info['name']));
 
 		// 输出JSON
 		Response::json($info);

@@ -53,22 +53,30 @@
 			<div class="control-group">
 				<label class="control-label">二级封面</label>
 				<div class="controls">
-					<img src="{{Helper::img($data['coverpath'], $coverThumbSize)}}" id="J_cover">
+					<img src="{{Helper::img($data['cover_small'], '215x100')}}" id="J_coverSmall">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">上传二级封面</label>
+				<div class="controls">
+					<input type="file" id="J_uploadCoverSmall" name="cover_upload">
+					<div class="help-block">生成尺寸：215x100；上传需使用jpg或png的图片</div>
 				</div>
 			</div>
 
 			<div class="control-group">
 				<label class="control-label">三级封面</label>
 				<div class="controls">
-					<img src="{{Helper::img($data['coverpath'], '475x386')}}" id="J_cover2">
+					<img src="{{Helper::img($data['coverpath'], '475x386')}}" id="J_cover">
 				</div>
 			</div>
 
 			<div class="control-group">
-				<label class="control-label">上传封面</label>
+				<label class="control-label">上传三级封面</label>
 				<div class="controls">
 					<input type="file" id="J_uploadCover" name="cover_upload">
-					<div class="help-block">生成尺寸：215x100,475x386；上传需使用jpg或png的图片</div>
+					<div class="help-block">生成尺寸：475x386；上传需使用jpg或png的图片</div>
 				</div>
 			</div>
 
@@ -119,10 +127,18 @@
 			uploadCover.config.formData = { 'id': {{$smarty.get.id}} };
 			uploadCover.onUploadSuccess = function(file, data, response) {
 				var info = $.parseJSON(data);
-				$('#J_cover').attr('src', "@/images/{{$coverThumbSize}}/" + info.name);
-				$('#J_cover2').attr('src', "@/images/475x386/" + info.name);
+				$('#J_cover').attr('src', "@/images/475x386/" + info.name);
 			};
 			uploadCover.upload('__URL__/cover');
+
+			// 上传二级封面图片
+			var uploadCover = new UploadImg('#J_uploadCoverSmall');
+			uploadCover.config.formData = { 'id': {{$smarty.get.id}} };
+			uploadCover.onUploadSuccess = function(file, data, response) {
+				var info = $.parseJSON(data);
+				$('#J_coverSmall').attr('src', "@/images/215x100/" + info.name);
+			};
+			uploadCover.upload('__URL__/coversmall');
 
 			// 上传需求规格
 			var uploadCover = new UploadImg('#J_uploadCover_requirement');
