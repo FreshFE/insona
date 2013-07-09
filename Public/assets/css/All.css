@@ -1105,10 +1105,10 @@ input[type='password'].register_text {
 	line-height:25px;
 }
 .register_file {
-	/*width: 224px;*/
-	/*height: 28px;*/
+	width: 224px;
+	height: 28px;
 	/*border: solid 1px #e3e3e3;*/
-	/*float: left;*/
+	float: left;
 }
 .register_text.no-input {
 	width: 250px;
