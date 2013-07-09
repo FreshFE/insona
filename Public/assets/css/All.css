@@ -207,7 +207,7 @@ input.search_text:-ms-clear {
 	font-family: "微软雅黑";
 	font-size: 12px;
 	color: #a40001;
-	line-height: 25px;
+	/*line-height: 25px;*/
 	margin-left:464px;
 	text-decoration: none;
 }
@@ -216,7 +216,7 @@ input.search_text:-ms-clear {
 	font-size: 12px;
 	color: #a40001;
 	text-decoration: underline;
-	line-height: 25px;
+	/*line-height: 25px;*/
 }
 .index_summary {
 	float: left;
