@@ -84,16 +84,21 @@
 
     {{include file="../Bases/tip.html"}}
 
-    <!--
     <script type="text/javascript" src="@/assets/js/jquery.js"></script>
     <script type="text/javascript">
 
       $(document).ready(function() {
         $('#J_input').on('keyup', function() {
-          console.log($(this).val().length);
+            var count = $(this).val().length;
+            $('#J_input_num').html(24 - count);
+        });
+
+        $('#J_textarea').on('keyup', function() {
+            var count = $(this).val().length;
+            $('#J_textarea_num').html(200 - count);
         });
       });
     </script>
-    -->
+    
 </body>
 </html>
