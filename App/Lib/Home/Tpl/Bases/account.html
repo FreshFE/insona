@@ -1,26 +1,22 @@
-{{if $smarty.session.com_auth_key}}
-<li class="container_ul_li1">
-	<a href="__GROUP__/account/logout" class="all_logon_a">{{L('LOGOUT')}}</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</li>
-{{else}}
-<li class="container_ul_li1">
-	<a href="__GROUP__/account/register"class="all_logon_a">{{L('REGISTER')}}</a>
-	<span class="container_span">&nbsp;|&nbsp;</span>
-</li>
+<div style="padding-top: 16px; text-align: center; float: right; margin-right: 40px;">
 
-<li class="container_ul_li1">
-	<a href="__GROUP__/account/login"class="all_logon_a1">{{L('LOGIN')}}</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</li>
+{{if $smarty.session.com_auth_key}}
+
+<a href="__GROUP__/account/logout" class="all_logon_a1">{{L('LOGOUT')}}</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+{{else}}
+
+<a href="__GROUP__/account/register"class="all_logon_a1">{{L('REGISTER')}}</a>
+<span class="container_span">&nbsp;|&nbsp;</span>
+
+<a href="__GROUP__/account/login"class="all_logon_a1">{{L('LOGIN')}}</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 {{/if}}
 
-<li class="container_ul_li1">
-	<a href="?language=zh-cn" class="all_logon_a1">中 文</a>
-	<span class="container_span">&nbsp;|&nbsp;</span>
-</li>
+<a href="?language=zh-cn" class="all_logon_a1">中 文</a>
+<span class="container_span">&nbsp;|&nbsp;</span>
+<a href="?language=en-us" class="all_logon_a1">English</a>
 
-<li class="container_ul_li1">
-	<a href="?language=en-us" class="all_logon_a1">English</a>
-</li>
+</div>
