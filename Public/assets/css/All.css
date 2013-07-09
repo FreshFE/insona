@@ -188,6 +188,7 @@ input.search_text:-ms-clear {
 	width: 90px;
 	line-height: 18px;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .search_content {
 	float: left;
