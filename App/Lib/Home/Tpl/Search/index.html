@@ -16,9 +16,11 @@
       <li class="container_ul_li"><a href="__GROUP__/support" class="container_ul_li_a">{{L('FEED_SUPPORT')}}</a></li>
       <li class="container_ul_li"><a href="__GROUP__/about" class="container_ul_li_a">{{L('ABOUT_US')}}</a></li>
         
-        {{include file="../Bases/account.html"}}        
-        
-		</ul><br /><br /><br /><br /><br />
+		</ul>
+
+    {{include file="../Bases/account.html"}}
+    
+    <br /><br /><br /><br /><br />
       <form action="__SELF__" method="get">
    			<input name="q" type="text" class="search_text" value="{{$smarty.get.q}}"/>
             <input type="submit" class="search_btn" value="" />
