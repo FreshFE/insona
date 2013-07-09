@@ -1340,3 +1340,13 @@ input[type='password'].register_text {
 	color: #777;
 	font-size: 12px;
 }
+.navigation-common {
+	width: 650px;
+	float: left;
+}
+.navigation-panel {
+	padding-top: 55px;
+	text-align: center;
+	float: right;
+	margin-right: 40px;
+}
