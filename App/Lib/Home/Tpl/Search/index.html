@@ -39,7 +39,7 @@
       {{foreach $product as $key => $data}}
 
     	<div class="search_content">
-        	<h1>{{$data.title}}<a href="__GROUP__/product/detail/id/{{$data.id}}" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+        	<h1>{{$data.title}}<a href="__GROUP__/product/detail/id/{{$data.id}}" class="search_container1_a" style="margin-right: 0; float: right;">查看详情 >></a></h1><br />
           <p class="three_p1" style="width: 740px;">
             {{Helper::mssubstr(strip_tags($data['content']), 250, true)}}
           </p>
@@ -52,7 +52,7 @@
         {{foreach $driver as $key => $data}}
 
       <div class="search_content">
-          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right;">查看详情 >></a></h1><br />
           <p class="three_p1" style="width: 740px;">
             {{Helper::mssubstr(strip_tags($data['content']), 250, true)}}
           </p>
@@ -65,7 +65,7 @@
         {{foreach $third as $key => $data}}
 
       <div class="search_content">
-          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right; margin-right: 40px;">查看详情 >></a></h1><br />
+          <h1>{{$data.title}}<a href="#" class="search_container1_a" style="margin-right: 0; float: right;">查看详情 >></a></h1><br />
           <p class="three_p1" style="width: 740px;">
             {{Helper::mssubstr(strip_tags($data['content']), 250, true)}}
           </p>
